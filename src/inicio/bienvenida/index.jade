@@ -1,7 +1,17 @@
 extends ../../_layouts/base
 
+include ../../_modules/content-block/content-block
+include ../../_modules/uiform/uiform
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.inicio.inicio--bienvenida
+        .inicio--bienvenida__col.inicio--bienvenida__col--employee.col-half
+            .inicio--bienvenida__image-frame
+                .inicio--bienvenida__image
+                    img(src='/images/logo.png')
+            +content-block('bienvenida', 'maría fernanda', 'Por favor register los datos de su Cita para iniciar sesion', '', '', 'false')
+        .inicio--bienvenida__col.inicio--bienvenida__col--form.col-half
+            +uiform(site.data.bienvenidaForm, 'iniciar cita', "light")

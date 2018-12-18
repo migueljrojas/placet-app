@@ -1,0 +1,168 @@
+.uiform {
+
+    $uiform : &;
+
+    width: 100%;
+    text-align: center;
+
+    &__group {
+        position: relative;
+        margin-bottom: 2vw;
+    }
+
+    &__label {
+
+        position: absolute;
+        top: -1vh;
+        left: 0;
+        color: $white;
+        opacity: 0;
+        font-size: 1.5vw;
+
+        &--select {
+            opacity: 1;
+            font-size: 1.5vw;
+            color: $white;
+        }
+    }
+
+    &__input {
+        &--anchor,
+        &--email,
+        &--text,
+        &--select {
+            background: transparent;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $white;
+            text-transform: capitalize;
+            height: 8vh;
+            color: $white;
+            font-size: 2vw;
+
+            &::placeholder {
+                @include trans;
+            }
+
+            &:focus {
+                font-size: 2vw;
+                color: $vibrantGolden;
+                outline: none;
+                border-bottom: 1px solid $vibrantGolden;
+
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+
+            &:focus + label {
+                color: $vibrantGolden;
+                opacity: 1;
+                font-size: 1.5vw;
+            }
+        }
+    }
+
+    &__anchor {
+        display: block;
+        margin-bottom: 2vw;
+        color: $vibrantGolden;
+        font-size: 2vw;
+        text-decoration: none;
+    }
+
+    &__button {
+        @include button(
+            $fontSize: 1.8vw, $btnBackground: transparent,
+            $paddTopBottom: 1.5vw,
+            $paddLeftRight: 8vw, $borderColor: $vibrantGolden,
+            $btnColor: $vibrantGolden, $btnSize: auto);
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &--light {
+        #{$uiform}__group {
+            position: relative;
+            margin-bottom: 4vw;
+        }
+
+        #{$uiform}__label {
+
+            position: absolute;
+            top: -1vh;
+            left: 0;
+            color: $lightGray;
+            opacity: 0;
+            font-size: 1.5vw;
+            padding: 0;
+
+            &--select {
+                opacity: 1;
+                font-size: 1.5vw;
+                color: $lightGray;
+                padding: 0;
+            }
+        }
+
+        #{$uiform}__input {
+            &--anchor,
+            &--email,
+            &--text,
+            &--select {
+                background: transparent;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid $lightGray;
+                text-transform: capitalize;
+                height: 8vh;
+                color: $lightGray;
+                font-size: 2vw;
+
+                &::placeholder {
+                    @include trans;
+                    padding: 0;
+                }
+
+                &:focus {
+                    font-size: 2vw;
+                    color: $vibrantGolden;
+                    outline: none;
+                    border-bottom: 1px solid $vibrantGolden;
+
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+
+                &:focus + label {
+                    color: $vibrantGolden;
+                    opacity: 1;
+                    font-size: 1.5vw;
+                }
+            }
+        }
+
+        #{$uiform}__anchor {
+            display: block;
+            margin-bottom: 2vw;
+            color: $vibrantGolden;
+            font-size: 2vw;
+            text-decoration: none;
+        }
+
+        #{$uiform}__button {
+            @include button(
+                $fontSize: 1.8vw, $btnBackground: transparent,
+                $paddTopBottom: 1.5vw,
+                $paddLeftRight: 8vw, $borderColor: $vibrantGolden,
+                $btnColor: $vibrantGolden, $btnSize: 100%);
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

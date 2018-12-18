@@ -2,11 +2,36 @@
     transition: $prop $d $e;
 }
 
-@mixin title($size: $lg, $color: $white, $align: 'left') {
+@mixin title($separator: true, $lineSeparation: 15px, $translate: -50%, $size: $lg, $color: $black, $background: $black, $lineHeight: 1px, $textAlign: center, $lineWidth: 30px) {
     text-transform: uppercase;
+    font-family: $titleFont;
     font-size: $size;
     color: $color;
-    text-align: #{$align};
+    position: relative;
+    padding-bottom: $lineSeparation;
+    font-weight: 400;
+    text-align: $textAlign;
+    margin-top: 0;
+    margin-bottom: $lineSeparation;
+
+    @if $separator {
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: $lineHeight;
+            background: $background;
+            left: 50%;
+            transform: translateX($translate);
+            bottom: 0;
+            width: $lineWidth;
+
+            @include mq(sm) {
+                width: $lineWidth;
+            }
+        }
+    }
 }
 
 @mixin padd($mode: both, $size: full) {
@@ -157,4 +182,78 @@
             transform: rotate(-45deg);
         }
     }
+}
+
+@mixin button ($fontSize: 1vw, $btnBackground: transparent, $paddTopBottom: .7vw, $paddLeftRight: 1.5vw, $borderColor: $golden, $btnColor: $golden, $btnSize: 100%) {
+    background: $btnBackground;
+    border: 1px solid $borderColor;
+    text-transform: uppercase;
+    padding-top: $paddTopBottom;
+    padding-bottom: $paddTopBottom;
+    padding-left: $paddLeftRight;
+    padding-right: $paddLeftRight;
+    color: $btnColor;
+    font-size: $fontSize;
+    cursor: pointer;
+    text-align: center;
+    width: $btnSize;
+
+    &:hover {
+        @include mq(md) {
+            transform: scale3d(1.1,1.1,1.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,.15);
+        }
+    }
+
+}
+
+@mixin arrow($pointTo, $color: inherit, $size: 10px) {
+    &:after {
+        content: "";
+        border: $size solid;
+        border-color: $color;
+        height: 0;
+        width: 0;
+        position: absolute;
+        z-index: 5;
+
+        @if $pointTo == down {
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            top: 100%;
+            left: calc(50% - $size);
+        }
+
+        @if $pointTo == up {
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            bottom: 100%;
+            left: calc(50% - $size);
+        }
+
+        @if $pointTo == left {
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            border-top-color: transparent;
+            right: 100%;
+            top: calc(50% - $size);
+        }
+
+        @if $pointTo == right {
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-top-color: transparent;
+            left: 100%;
+            top: calc(50% - $size);
+        }
+    }
+}
+
+@mixin text($size: 14px, $color: $indigo, $fontWeight: 300, $fontStyle: normal) {
+    font-size: $size;
+    color: $color;
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
 }

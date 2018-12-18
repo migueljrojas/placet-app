@@ -1,0 +1,197 @@
+.inicio {
+    &--login {
+        height: 90vh;
+        background: url('/images/inicio/about-main.jpg') no-repeat center center / cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__form {
+            width: 70%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 4vw;
+        }
+
+        &__text {
+            color: $white;
+            font-size: 1.5vw;
+            margin: 0;
+            text-align: center;
+
+            strong {
+                font-weight: 900;
+            }
+        }
+    }
+
+    &--bienvenida {
+        height: 90vh;
+        display: flex;
+
+        &__col {
+            padding: 5vh;
+
+            &--employee {
+                padding: 5vh;
+
+                .content-block {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    &__text {
+                        width: 70%;
+                    }
+                }
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: url('/images/inicio/about-main.jpg') no-repeat center center / cover;
+            }
+
+            &--form {
+                padding: 10vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &__image-frame {
+            border: 1px solid $vibrantGolden;
+            width: 18vw;
+            height: 18vw;
+            margin-bottom: 2.5vw;
+            border-radius: 50vw;
+            position: relative;
+        }
+
+        &__image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 1000px;
+            overflow: hidden;
+            margin: 1vw;
+
+            img {
+
+            }
+        }
+    }
+
+    &--presentacion {
+
+        .tab {
+            &--presentacion {
+                height: 90vh;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100vw;
+
+                &__col {
+                    height: 75vh;
+
+                    &--logo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 0 6vw;
+                        background: url('/images/presentacion/texture-pattern.jpg');
+                    }
+
+                    &--images {
+                        display: flex;
+                    }
+                }
+
+                &__logo {
+                    width: 70%;
+                    margin-bottom: 10vh;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                &__title {
+                    color: $vibrantGolden;
+                    font-size: 2.8vw;
+                    font-weight: 100;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+
+                &__text {
+                    font-size: 2.7vw;
+                    color: $white;
+                    letter-spacing: 2px;
+                    font-weight: 100;
+                    text-align: center;
+                }
+
+                &__cell {
+                    height: 37.5vh;
+                    width: 100%;
+                    overflow: hidden;
+
+                    &--up-left,
+                    &--down-right {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: $lightGray;
+                        padding: 3vw;
+
+                        .content-block {
+                            margin: 0;
+
+                            &__title {
+                                font-size: 3.5vw;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    &--down-right {
+                        background: $vibrantGolden;
+
+                        .content-block {
+                            &__title {
+                                &:after {
+                                    background: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &__image {
+                    height: 37.5vh;
+
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

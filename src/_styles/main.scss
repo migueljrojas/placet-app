@@ -15,12 +15,21 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
     font-family: $mainFont;
     font-weight: 300;
     overflow-x: hidden;
     width: 100vw;
     font-size: $sm;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: $mainFont;
 }
 
 a {

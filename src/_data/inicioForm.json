@@ -1,0 +1,16 @@
+[
+    {
+        "placeholder":"Email",
+        "type":"email",
+        "label":"Email"
+    },
+    {
+        "placeholder":"Contraseña",
+        "type":"text",
+        "label":"Contraseña"
+    },
+    {
+        "type":"anchor",
+        "text":"No recuerdo mi contraseña"
+    }
+]

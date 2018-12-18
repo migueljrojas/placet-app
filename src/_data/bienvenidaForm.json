@@ -1,0 +1,42 @@
+[
+    {
+        "type":"select",
+        "label":"Cliente",
+        "options": [
+            "Seleccionar Cliente",
+            "Nuevo cliente de Placèt",
+            "Cliente ya registrado de Placèt"
+        ]
+    },
+    {
+        "type":"select",
+        "label":"Cita",
+        "options": [
+            "Seleccionar Cita",
+            "Primera Cita",
+            "Segunda Cita",
+            "Tercera Cita"
+        ]
+    },
+    {
+        "type":"select",
+        "label":"Sastre",
+        "options": [
+            "Seleccionar Sastre",
+            "Sastre1",
+            "Sastre2",
+            "Sastre3"
+        ]
+    },
+    {
+        "type":"select",
+        "label":"Auxiliar",
+        "options": [
+            "Seleccionar Auxiliar",
+            "Auxiliar1",
+            "Auxiliar2",
+            "Auxiliar3"
+        ]
+
+    }
+]

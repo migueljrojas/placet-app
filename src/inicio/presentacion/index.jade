@@ -1,13 +1,13 @@
 extends ../../_layouts/base
 
-include ./tabs/marcas
-include ./tabs/presentacion
+include ../../_modules/content-block/content-block
+include ../../inicio/presentacion/tabs/presentacion
+include ../../inicio/presentacion/tabs/marcas
 
 block config
   - var baseUrl = '../../'
 
 block content
     main.inicio.inicio--presentacion
-    
-    +tab-marcas
-    +tab-presentacion
+        +tab-presentacion()
+        +tab-marcas()
