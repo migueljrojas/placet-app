@@ -1,0 +1,30 @@
+[
+    [
+        {
+            "label":"marcas",
+            "target":"marcas"
+        },
+        {
+            "label":"testimonios",
+            "target":"testimonios"
+        },
+        {
+            "label":"beneficios",
+            "target":"beneficios"
+        }
+    ],
+    [
+        {
+            "label":"como funciona",
+            "target":"como-funciona"
+        },
+        {
+            "label":"preguntas y respuestas",
+            "target":"faq"
+        },
+        {
+            "label":"",
+            "target":""
+        }
+    ]
+]

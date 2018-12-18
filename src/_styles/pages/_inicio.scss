@@ -96,6 +96,11 @@
     }
 
     &--presentacion {
+        display: block;
+
+        &__content {
+            height: 75vh;
+        }
 
         .tab {
             &--presentacion {
@@ -191,7 +196,36 @@
                         height: 100%;
                     }
                 }
+
             }
+        }
+
+
+        &__nav {
+            height: 15vh;
+        }
+
+        &__nav-panel {
+            .slick-arrow {
+                &:before {
+                    color: $vibrantGolden;
+                }
+            }
+        }
+
+        &__nav-group {
+            height: 15vh;
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__nav-item {
+            color: $vibrantGolden;
+            margin: 0 4vw;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 2vw;
         }
     }
 }

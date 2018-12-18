@@ -6,10 +6,11 @@ var Slider = function() {
     if (slider) {
         slider.each(function(){
             $(this).slick({
-                dots: true,
+                dots: false,
                 fade: true,
-                arrows:  false,
-                autoplay: true
+                arrows: true,
+                infinite: false,
+                autoplay: false
             });
         });
     }
