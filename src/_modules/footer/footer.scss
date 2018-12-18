@@ -23,13 +23,12 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-
     }
 
     &__input {
         @include trans;
 
-        font-size: 2vw;
+        font-size: 1.4vw;
         background: transparent;
         border: transparent;
         outline: none;
@@ -37,20 +36,23 @@
         padding: 1.1vw;
         color: $white;
         text-align: right;
-
+        width: 100px;
+        text-align: right;
+        font-weight: 300;
 
         &::placeholder {
+            @include trans;
             color: $white;
-            font-size: 2vw;
+            font-size: 1.4vw;
         }
 
         &:focus {
             @include trans;
 
-            min-width: 50vw;
+            width: 50%;
             outline: none;
             justify-content: flex-end;
-            border: 1px solid $vibrantGolden;
+            background: rgba(255,255,255,.05);
             text-align: left;
 
             &::placeholder {
@@ -66,8 +68,8 @@
     }
 
     i {
-        font-size: 3vw;
-        margin-left: 2vw;
+        font-size: 2vw;
+        margin-left: 1.5vw;
         color: $white;
     }
 }
