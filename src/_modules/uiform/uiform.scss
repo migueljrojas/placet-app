@@ -7,7 +7,7 @@
 
     &__group {
         position: relative;
-        margin-bottom: 2vw;
+        margin-bottom: 4vw;
     }
 
     &__label {
@@ -17,12 +17,13 @@
         left: 0;
         color: $white;
         opacity: 0;
-        font-size: 1.5vw;
+        font-size: 1.4vw;
 
         &--select {
             opacity: 1;
-            font-size: 1.5vw;
+            font-size: 1.4vw;
             color: $white;
+            top: -1.1vw;
         }
     }
 
@@ -36,16 +37,22 @@
             border: none;
             border-bottom: 1px solid $white;
             text-transform: capitalize;
-            height: 8vh;
+            height: 7vh;
             color: $white;
-            font-size: 2vw;
+            font-size: 1.6vw;
+            font-weight: 300;
+            letter-spacing: 1.2px;
+            padding-left: 0;
 
             &::placeholder {
                 @include trans;
+                opacity: 1;
+                font-weight: 300;
+                color: $white;
+                letter-spacing: 1.2px;
             }
 
             &:focus {
-                font-size: 2vw;
                 color: $vibrantGolden;
                 outline: none;
                 border-bottom: 1px solid $vibrantGolden;
@@ -58,7 +65,18 @@
             &:focus + label {
                 color: $vibrantGolden;
                 opacity: 1;
-                font-size: 1.5vw;
+                font-size: 1.2vw;
+            }
+        }
+
+        &--select {
+            & + label {
+                font-size: 1.4vw;
+                text-transform: uppercase;
+            }
+
+            &:focus + label {
+                font-size: 1.4vw;
             }
         }
     }
@@ -67,13 +85,13 @@
         display: block;
         margin-bottom: 2vw;
         color: $vibrantGolden;
-        font-size: 2vw;
+        font-size: 1.4vw;
         text-decoration: none;
     }
 
     &__button {
         @include button(
-            $fontSize: 1.8vw, $btnBackground: transparent,
+            $fontSize: 1.6vw, $btnBackground: transparent,
             $paddTopBottom: 1.5vw,
             $paddLeftRight: 8vw, $borderColor: $vibrantGolden,
             $btnColor: $vibrantGolden, $btnSize: auto);
@@ -81,29 +99,17 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        letter-spacing: 1.2px;
     }
 
     &--light {
-        #{$uiform}__group {
-            position: relative;
-            margin-bottom: 4vw;
-        }
 
         #{$uiform}__label {
 
-            position: absolute;
-            top: -1vh;
-            left: 0;
             color: $lightGray;
-            opacity: 0;
-            font-size: 1.5vw;
-            padding: 0;
 
             &--select {
-                opacity: 1;
-                font-size: 1.5vw;
                 color: $lightGray;
-                padding: 0;
             }
         }
 
@@ -112,57 +118,22 @@
             &--email,
             &--text,
             &--select {
-                background: transparent;
-                width: 100%;
-                border: none;
                 border-bottom: 1px solid $lightGray;
-                text-transform: capitalize;
-                height: 8vh;
                 color: $lightGray;
-                font-size: 2vw;
-
-                &::placeholder {
-                    @include trans;
-                    padding: 0;
-                }
 
                 &:focus {
-                    font-size: 2vw;
                     color: $vibrantGolden;
-                    outline: none;
                     border-bottom: 1px solid $vibrantGolden;
-
-                    &::placeholder {
-                        opacity: 0;
-                    }
                 }
 
                 &:focus + label {
                     color: $vibrantGolden;
-                    opacity: 1;
-                    font-size: 1.5vw;
                 }
             }
         }
 
         #{$uiform}__anchor {
-            display: block;
-            margin-bottom: 2vw;
             color: $vibrantGolden;
-            font-size: 2vw;
-            text-decoration: none;
-        }
-
-        #{$uiform}__button {
-            @include button(
-                $fontSize: 1.8vw, $btnBackground: transparent,
-                $paddTopBottom: 1.5vw,
-                $paddLeftRight: 8vw, $borderColor: $vibrantGolden,
-                $btnColor: $vibrantGolden, $btnSize: 100%);
-
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
         }
     }
 }
