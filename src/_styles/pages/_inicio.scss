@@ -1,8 +1,9 @@
 .inicio {
+    height: 90vh;
+    display: flex;
+
     &--login {
-        height: 90vh;
         background: url('/images/inicio/about-main.jpg') no-repeat center center / cover;
-        display: flex;
         align-items: center;
         justify-content: center;
 
@@ -26,16 +27,15 @@
             font-size: 1.5vw;
             margin: 0;
             text-align: center;
+            line-height: 1.8;
 
             strong {
-                font-weight: 900;
+                font-weight: 700;
             }
         }
     }
 
     &--bienvenida {
-        height: 90vh;
-        display: flex;
 
         &__col {
             padding: 5vh;
