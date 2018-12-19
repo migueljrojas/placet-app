@@ -1,0 +1,8 @@
+mixin tab-perfil-cliente
+    .tab.tab--perfil-cliente
+        .tab--perfil-cliente__col--description.tab__col--description.col-third
+            +content-block('creacion de clientes placèt', 'perfilamiento del cliente', 'Queremos conocerlo mejor para poderle brindar el nivel de servicio u los productos personalizados ajustados exclusivamente para usted. Por eso queremos hacerle unas preguntas', '', 'white')
+        .tab--perfil-cliente__col--form.tab__col--form.col-two-thirds
+            +uiform(site.data.perfilCliente, 'siguiente paso', 'light')
+        
+    

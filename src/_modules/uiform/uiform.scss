@@ -5,6 +5,9 @@
     width: 100%;
     text-align: center;
 
+    &__wrapper {
+        width: 100%;
+    }
     &__group {
         position: relative;
         margin-bottom: 4vw;
@@ -18,12 +21,14 @@
         color: $white;
         opacity: 0;
         font-size: 1.4vw;
+        text-transform: uppercase;
 
         &--select {
             opacity: 1;
             font-size: 1.4vw;
             color: $white;
             top: -1.1vw;
+            text-transform: uppercase;
         }
     }
 
@@ -31,7 +36,8 @@
         &--anchor,
         &--email,
         &--text,
-        &--select {
+        &--select,
+        &--number {
             background: transparent;
             width: 100%;
             border: none;
@@ -43,6 +49,7 @@
             font-weight: 300;
             letter-spacing: 1.2px;
             padding-left: 0;
+            text-transform: uppercase;
 
             &::placeholder {
                 @include trans;
@@ -50,6 +57,7 @@
                 font-weight: 300;
                 color: $white;
                 letter-spacing: 1.2px;
+                text-transform: uppercase;
             }
 
             &:focus {
@@ -117,9 +125,14 @@
             &--anchor,
             &--email,
             &--text,
-            &--select {
+            &--select,
+            &--number {
                 border-bottom: 1px solid $lightGray;
                 color: $lightGray;
+
+                &::placeholder {
+                    color: $lightGray;
+                }
 
                 &:focus {
                     color: $vibrantGolden;

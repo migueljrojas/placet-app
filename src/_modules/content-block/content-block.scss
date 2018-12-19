@@ -1,4 +1,6 @@
 .content-block {
+    $cb: &;
+
     text-align: center;
     width: 100%;
     margin-bottom: 2vh;
@@ -14,8 +16,8 @@
 
     &__title {
         @include title($separator: true, $lineSeparation: 4vh,
-        $translate: -50%, $color: $white, $background: $vibrantGolden,
-        $lineHeight: 2px, $size: 4.5vw, $lineWidth: 5vw);
+        $translate: -50%, $color: $indigo, $background: $vibrantGolden,
+        $lineHeight: 1px, $size: 4.5vw, $lineWidth: 5vw);
 
         font-weight: normal;
     }
@@ -31,5 +33,26 @@
     &__link {
         @include button($fontSize: 2vw, $btnColor: $vibrantGolden, $paddLeftRight: 4vw, $paddTopBottom: 1vw, $btnBackground: transparent, $borderColor: $vibrantGolden);
         margin: 0;
+        text-decoration: none;
+    }
+
+    &--white {
+        #{$cb}__subtitle {
+            color: $vibrantGolden;
+        }
+
+        #{$cb}__title {
+            color: $white;
+        }
+
+        #{$cb}__text {
+            color: $white;
+        }
+
+        #{$cb}__link {
+            @include button($fontSize: 2vw, $btnColor: $vibrantGolden, $paddLeftRight: 4vw, $paddTopBottom: 1vw, $btnBackground: transparent, $borderColor: $vibrantGolden);
+            margin: 0;
+        }
+
     }
 }

@@ -9,7 +9,8 @@ var DataSwitcher = function() {
         contents.first().addClass('-active');
     }
 
-    if (targets.length > 0 && targets.length === contents.length) {
+    // if (targets.length > 0 && targets.length === contents.length) {
+    if (targets.length > 0) {
         targets.on('click', function() {
             var $this = $(this);
             var targettedContent = $this.data('target');

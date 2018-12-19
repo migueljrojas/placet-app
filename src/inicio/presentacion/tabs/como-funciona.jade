@@ -1,0 +1,13 @@
+mixin tab-como-funciona()
+    .tab.tab--como-funciona(data-content="como-funciona")
+        h2.tab--como-funciona__header como funciona placèt
+        .tab--como-funciona__content
+            .tab--como-funciona__row
+                .tab--como-funciona__text
+                    +content-block('', 'primera cita', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+            .tab--como-funciona__row.tab--como-funciona__row--right-align
+                .tab--como-funciona__text.tab--como-funciona__text--right-align
+                    +content-block('', 'segunda cita', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+            .tab--como-funciona__row
+                .tab--como-funciona__text
+                    +content-block('', 'tercera cita', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')

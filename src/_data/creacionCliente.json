@@ -1,0 +1,56 @@
+[
+    {
+        "type":"text",
+        "label":"Nombre",
+        "placeholder":"nombre"
+    },
+    {
+        "type":"text",
+        "label":"Apellido",
+        "placeholder":"apellido"
+    },
+    {
+        "type":"email",
+        "label":"email",
+        "placeholder":"email"
+    },
+    {
+        "type":"number",
+        "label":"telefono",
+        "placeholder":"telefono"
+    },
+    {
+        "type":"text",
+        "label":"direccion casa",
+        "placeholder":"direccion casa"
+    },
+    {
+        "type":"select",
+        "label":"ciudad",
+        "options": [
+            "ciudad",
+            "bogota",
+            "medellin"
+        ]
+    },
+    {
+        "type":"text",
+        "label":"direccion oficina",
+        "placeholder":"direccion oficina"
+    },
+    {
+        "type":"text",
+        "label":"fecha de nacimiento",
+        "placeholder":"fecha de nacimiento"
+    },
+    {
+        "type":"text",
+        "label":"contraseña",
+        "placeholder":"contraseña"
+    },
+    {
+        "type":"text",
+        "label":"repetir contraseña",
+        "placeholder":"repetir contraseña"
+    }
+]

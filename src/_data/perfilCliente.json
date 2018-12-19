@@ -1,0 +1,18 @@
+[
+    {
+        "type":"text",
+        "label":"Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+    },
+    {
+        "type":"text",
+        "label":"Duis aite irure dolor in reprehenderit in voluptate?"
+    },
+    {
+        "type":"text",
+        "label":"Sed ut perspiciatis unde ominis natus error sit voluptatem?"
+    },
+    {
+        "type":"text",
+        "label":"Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+    }
+]

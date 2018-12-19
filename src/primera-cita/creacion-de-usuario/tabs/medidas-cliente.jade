@@ -1,0 +1,6 @@
+mixin tab-medidas-cliente
+    .tab.tab--medidas-cliente
+        .tab--medidas-cliente__col--description.tab__col--description.col-third
+            +content-block('creacion de clientes placèt', 'registro de medidas', 'Para brindarle productos personalizados ajustados exclusivamente para usted, necesitamos ingresar sus medidas. No se preocupe, solo haremos este paso una sola vez.', '', 'white')
+        .tab--medidas-cliente__col--form.tab__col--form.col-two-thirds
+            +uiform(site.data.medidasCliente, 'siguiente paso', 'light')

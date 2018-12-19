@@ -1,0 +1,7 @@
+mixin tab-datos-personales
+    .tab.tab--datos-personales
+        .tab--datos-personales__col.tab__col--description.col-third
+            +content-block('creacion de clientes placèt', 'datos personales', 'Por favor introduzca los siguientes datos', '', 'white')
+        .tab--datos-personales__col.tab__col--form.col-two-thirds
+            +uiform(site.data.creacionCliente, 'siguiente paso', 'light')
+    

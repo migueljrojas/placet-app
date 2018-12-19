@@ -1,0 +1,18 @@
+[
+    {
+        "background":"/images/testimonios/about-main.jpg",
+        "quote":"“Sara es excepcional en su trabajo y vale cada minuto. Tiene un ojo meticuloso al detalle y es una Personal Shopper perfeccionista que siempre está dispuesta a hacer ese esfuerzo adicional para sus clientes”",
+        "author":"Carlos Raúl Yepes, Ex-Presidente Bancolombia",
+        "shopper":"/images/testimonios/person-1.png",
+        "text":"Personal Shopper",
+        "name":"Sara Fernández"
+    },
+    {
+        "background":"/images/testimonios/about-quotes.jpg",
+        "quote":"“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”",
+        "author":"Carlos Raúl Yepes, Ex-Presidente Bancolombia",
+        "shopper":"/images/testimonios/person-2.png",
+        "text":"Personal Shopper",
+        "name":"Sara Fernández"
+    }
+]

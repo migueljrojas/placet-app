@@ -1,7 +1,37 @@
 extends ../../_layouts/base
 
+include ../../_modules/content-block/content-block
+include ../../_modules/uiform/uiform
+include ../../primera-cita/creacion-de-usuario/tabs/datos-personales
+include ../../primera-cita/creacion-de-usuario/tabs/perfil-cliente
+include ../../primera-cita/creacion-de-usuario/tabs/medidas-cliente
+include ../../primera-cita/creacion-de-usuario/tabs/bienvenida
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.primera-cita.primera-cita--creacion-usuario
+        +tab-datos-personales
+        +tab-perfil-cliente
+        +tab-medidas-cliente
+        +tab-bienvenida
+        
+        .primera-cita__step-count
+            .primera-cita__step.-active
+                .primera-cita__step-frame
+                    span.primera-cita__step-number 1
+                .primera-cita__step-unactive •
+            .primera-cita__step
+                .primera-cita__step-frame
+                    span.primera-cita__step-number 2
+                .primera-cita__step-unactive •
+            .primera-cita__step
+                .primera-cita__step-frame
+                    span.primera-cita__step-number 3
+                .primera-cita__step-unactive •
+            .primera-cita__step
+                .primera-cita__step-frame
+                    span.primera-cita__step-number 4
+                .primera-cita__step-unactive •
+                

@@ -1,0 +1,12 @@
+mixin tab-faq()
+    .tab.tab--faq(data-content="faq")
+        h2.tab--faq__header preguntas y respuestas
+        .tab--faq__content
+            each item,index in site.data.faq
+                .tab--faq__row
+                    .tab--faq__wrapper(data-target="faq-#{index}")
+                        span.tab--faq__bullet=item.bullet
+                        p.tab--faq__question=item.question
+                        .tab--faq__button-container
+                            button.tab--faq__button
+                    .tab--faq__answer(data-content="faq-#{index}")=item.answer

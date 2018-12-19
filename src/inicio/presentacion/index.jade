@@ -3,6 +3,10 @@ extends ../../_layouts/base
 include ../../_modules/content-block/content-block
 include ../../inicio/presentacion/tabs/presentacion
 include ../../inicio/presentacion/tabs/marcas
+include ../../inicio/presentacion/tabs/testimonios
+include ../../inicio/presentacion/tabs/beneficios
+include ../../inicio/presentacion/tabs/como-funciona
+include ../../inicio/presentacion/tabs/faq
 include ../../_modules/slider/slider
 
 block config
@@ -11,11 +15,15 @@ block config
 block content
     main.inicio.inicio--presentacion
         .inicio--presentacion__content
-            +tab-presentacion()
-            +tab-marcas()
+            //- +tab-presentacion
+            //- +tab-marcas
+            //- +tab-testimonios
+            //- +tab-beneficios
+            //- +tab-como-funciona
+            +tab-faq
         
         .inicio--presentacion__nav
-            +slider('inicio--presentacion__nav-panel')
+            +slider('inicio--presentacion__nav-panel', 'normal')
                 each group in site.data.inicioNav
                     .inicio--presentacion__nav-group
                         each item in group

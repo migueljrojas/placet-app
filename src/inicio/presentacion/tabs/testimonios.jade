@@ -1,0 +1,20 @@
+mixin tab-testimonios()
+    .tab.tab--testimonios(data-content="testimonios")
+        .tab--testimonios__row.tab--testimonios__row--header
+            h2.tab--testimonios__title testimonios
+            p.tab--testimonios__comment Lo que dicen nuestro clientes acerca de PLACÈT
+        .tab--testimonios__row.tab--testimonios__row--slider
+            img(src="/images/testimonios/about-quotes.jpg")
+            +slider('tab--testimonios__slider', 'alt')
+                each item in site.data.testimonios
+                    .tab--testimonios__slide
+                        .tab--testimonios__card
+                            p.tab--testimonios__quote=item.quote
+                            p.tab--testimonios__author=item.author
+                            .tab--testimonios__wrapper
+                                .tab--testimonios__image-frame
+                                    .tab--testimonios__image
+                                        img(src=item.shopper)
+                                .tab--testimonios__content
+                                    p.tab--testimonios__text=item.text
+                                    p.tab--testimonios__name=item.name
