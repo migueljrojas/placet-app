@@ -954,9 +954,6 @@
             text-align: center;
             text-decoration: none;
             padding: 1.5vw 4vw;
-
-            @include mq(sm) {
-            }
         }
 
         &__description {
@@ -1064,6 +1061,10 @@
             }
         }
 
+        &__wrapper {
+            width: 100%;
+        }
+
         &__item {
             flex-wrap: wrap;
             display: flex;
@@ -1094,6 +1095,7 @@
 
                 p {
                     font-size: 1.2vw;
+                    text-transform: capitalize;
                 }
             }
 
@@ -1130,10 +1132,6 @@
                     display: inline-block;
                 }
             }
-        }
-
-        &__totals {
-
         }
 
         &__subtotal {
@@ -1214,15 +1212,236 @@
 
         &__button {
             @include button;
-            width: 20vw;
             text-transform: uppercase;
             color: $vibrantGolden;
             border: 1px solid $vibrantGolden;
             background: transparent;
             margin-top: 5px;
-            padding: 1.5vw;
-            font-size: 1.2vw;
+            padding: 1.5vw 4vw;;
+            font-size: 1.4vw;
             text-decoration: none;
+            width: auto;
         }
+
+        &__cta {
+            height: 15vh;
+            display: flex;
+
+            &__col {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__text {
+                color: $indigo;
+                padding-right: 10vw;
+            }
+        }
+    }
+
+    &--checkout {
+        &__wrapper {
+            overflow-y: scroll;
+            height: 48vh;
+        }
+
+    }
+
+    &--agendar {
+        &__form {
+            padding: 20px;
+            background: $lightestGray;
+
+            @include mq(sm) {
+                padding: 6vw 10vw;
+            }
+
+            &__container {
+                background: $white;
+
+                @include mq(sm) {
+                    display: flex;
+                }
+            }
+
+            &__select {
+                margin-bottom: 3vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                @include mq(sm) {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+            }
+
+            &__shopper {
+                margin-right: 2vw;
+                color: $indigo;
+                text-align: center;
+            }
+
+            &__col {
+                @include trans;
+
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vw;
+
+                @include mq(sm) {
+                    min-height: auto;
+                    width: 33.34%;
+                    padding: 2vw;
+                }
+
+                &.-active {
+                    box-shadow: 0 10px 20px $lightGray;
+                }
+            }
+
+            &__data {
+                padding-bottom: 20px;
+
+                @include mq(sm) {
+                    padding-bottom: 3vw;
+                }
+
+                .content-block {
+                    &__title {
+                        font-size: 40px;
+
+                        @include mq(sm) {
+                            font-size: 4vw;
+                            padding-bottom: 1.5vw;
+                            margin-bottom: 1.5vw;
+                        }
+                    }
+
+                    &__text {
+                        font-weight: 300;
+                        font-size: 20px;
+                        padding-bottom: 20px;
+                        padding-top: 0;
+
+                        @include mq(sm) {
+                            padding-bottom: 1vw;
+                            font-size: 1.2vw;
+                        }
+                    }
+                }
+            }
+
+            &__selector,
+            &__address {
+                border: 1px solid $lightGray;
+                margin-bottom: 20px;
+                padding: 20px;
+                font-size: 18px;
+                background: transparent;
+                color: $lightGray;
+
+                @include mq(sm) {
+                    margin-bottom: 1vw;
+                    padding: 1vw;
+                    font-size: 1.3vw;
+                }
+
+                &--shopper {
+                    width: 90%;
+
+                    @include mq(sm) {
+                        width: 20vw;
+                    }
+                }
+
+                &--submit {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border: 1px solid $vibrantGolden;
+                    color: $vibrantGolden;
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                    width: 90%;
+
+                    @include mq(sm) {
+                        margin-top: 3vw;
+                        padding: 1vw 2vw;
+                        width: auto;
+                    }
+                }
+            }
+
+            &__text {
+                text-align: center;
+                font-size: 16px;
+
+                @include mq(sm) {
+                    font-size: 1.1vw;
+                }
+            }
+
+            &__registered-address {
+                color: $vibrantGolden;
+                text-align: center;
+                border-bottom: 1px solid $lightGray;
+                font-size: 18px;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+
+                @include mq(sm) {
+                    font-size: 1.2vw;
+                    padding-bottom: 1.5vw;
+                    margin-bottom: 1.5vw;
+                }
+            }
+
+            &__wrapper {
+                display: flex;
+                align-items: center;
+                padding-bottom: 20px;
+
+                @include mq(sm) {
+                    padding-bottom: 1.5vw;
+                }
+            }
+
+            &__input {
+                position: absolute;
+                left: -9999px;
+
+                &:checked + label {
+                        background: $vibrantGolden;
+                }
+            }
+
+            &__label {
+                @include trans;
+
+                position: relative;
+                width: 25px;
+                height: 25px;
+                border: 1px solid $lightGray;
+                border-radius: 50%;
+            }
+
+            &__info {
+                width: 90%;
+                padding-left: 10px;
+                font-size: 14px;
+                @include mq(sm) {
+                    padding-left: 1vw;
+                    font-size: 1.2vw;
+
+                }
+            }
+        }
+
     }
 }

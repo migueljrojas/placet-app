@@ -1,7 +1,54 @@
 extends ../../_layouts/base
 
+include ../../_modules/quantity-selector/quantity-selector
+include ../../_modules/content-block/content-block
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.primera-cita.primera-cita--agendar
+        .primera-cita--agendar__form__container
+            .primera-cita--agendar__form__col
+                .primera-cita--agendar__form__data
+                    +content-block('', '1', 'Por favor elija una fecha para su cita', '', '', '', '',  'false')
+                .primera-cita--agendar__form__calendar
+                    input#date(type="hidden", name="date")
+                    #monthPicker.monthly
+
+            .primera-cita--agendar__form__col
+                .primera-cita--agendar__form__data
+                    +content-block('', '2', 'Ahora elija el horario para su cita', '', '', '', '', 'false')
+                select.primera-cita--agendar__form__selector 
+                    option.primera-cita--agendar__form__option(value='') Turno
+                    option.primera-cita--agendar__form__option(value='0') Mañana
+                    option.primera-cita--agendar__form__option(value='1') Tarde
+                    option.primera-cita--agendar__form__option(value='2') Noche
+                select.primera-cita--agendar__form__selector 
+                    option.primera-cita--agendar__form__option(value='') Horario
+                    option.primera-cita--agendar__form__option(value='0') 8:00AM - 12:00PM
+                    option.primera-cita--agendar__form__option(value='1') 12:00PM - 4:00PM
+                    option.primera-cita--agendar__form__option(value='2') 4:00PM - 8:00PM
+
+            .primera-cita--agendar__form__col
+                .primera-cita--agendar__form__data
+                    +content-block('', '3', 'Indíquenos el lugar de su cita', '', '', '', '', 'false')
+                p.primera-cita--agendar__form__text Tenemos registrada esta dirección:
+                span.primera-cita--agendar__form__registered-address Calle 100 # 13-20, Bogotá
+                .primera-cita--agendar__form__wrapper
+                    input.primera-cita--agendar__form__input(type='radio', name='option', id='option1')
+                    label.primera-cita--agendar__form__label(for='option1')
+                    p.primera-cita--agendar__form__info Si, deseo ser visitado en esta dirección
+                .primera-cita--agendar__form__wrapper
+                    input.primera-cita--agendar__form__input(type='radio', name='option', id='option2')
+                    label.primera-cita--agendar__form__label(for='option2')
+                    p.primera-cita--agendar__form__info No, deseo que mi visita se haga en la siguiente dirección:
+                input.primera-cita--agendar__form__address(type='text', placeholder='Dirección')
+                select.primera-cita--agendar__form__selector
+                    option.primera-cita--agendar__form__option(value='') Ciudad
+                    option.primera-cita--agendar__form__option(value='0') Bogotá
+                    option.primera-cita--agendar__form__option(value='1') Medellín
+                    option.primera-cita--agendar__form__option(value='2') Barranquilla
+        button.primera-cita--agendar__form__address.primera-cita--agendar__form__address--submit deseo agendar mi cita
+block scripts
+    script(src= baseUrl + 'scripts/monthly.js')
