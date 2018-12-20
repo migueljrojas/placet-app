@@ -1,7 +1,45 @@
 extends ../../_layouts/base
 
+include ../../_modules/content-block/content-block
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.paginas.paginas--bienvenida
+        .paginas--bienvenida__col.paginas--bienvenida__col--left.col-third
+            +content-block('', 'la mejor ropa del mundo, a domicilio', 'Loren ipsum dolor sit amet consectetur adipiscing elit', {'text':'ver beneficios', 'url':'#'}, 'white')
+        .paginas--bienvenida__col.paginas--bienvenida__col--right.col-two-thirds
+            .paginas--bienvenida__innercol.col-half
+                .paginas--bienvenida__cell
+                    .paginas--bienvenida__image
+                        img(src="/images/presentacion/down-left.jpg")
+                    .paginas--bienvenida__content
+                        +content-block('', 'beneficios', 'Loren ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt elit sed do euismod')
+                .paginas--bienvenida__cell
+                    .paginas--bienvenida__image
+                        img(src="/images/presentacion/down-left.jpg")
+                    .paginas--bienvenida__content.paginas--bienvenida__content--resize
+                        +content-block('', 'marcas placèt', 'Loren ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt elit sed do euismod')
+                .paginas--bienvenida__cell
+                    .paginas--bienvenida__image
+                        img(src="/images/presentacion/down-left.jpg")
+                    .paginas--bienvenida__content
+                        +content-block('', 'agendar cita', 'Loren ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt elit sed do euismod')
+            .paginas--bienvenida__innercol.col-half
+                .paginas--bienvenida__cell
+                    .paginas--bienvenida__image
+                        img(src="/images/presentacion/down-left.jpg")
+                    .paginas--bienvenida__content.paginas--bienvenida__content--resize
+                        +content-block('', '¿como funciona?', 'Loren ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt elit sed do euismod', '', 'white')
+                .paginas--bienvenida__cell
+                    .paginas--bienvenida__image
+                        img(src="/images/presentacion/down-left.jpg")
+                    .paginas--bienvenida__content
+                        +content-block('', 'tienda online', 'Loren ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt elit sed do euismod')
+                .paginas--bienvenida__cell
+                    .paginas--bienvenida__image
+                        img(src="/images/presentacion/down-left.jpg")
+                    .paginas--bienvenida__content.paginas--bienvenida__content--resize.paginas--bienvenida__content--line-color
+                        +content-block('', 'mix & match', 'Loren ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt elit sed do euismod', '', 'white')
+            
