@@ -1314,16 +1314,12 @@
             &__col {
                 @include trans;
 
-                padding: 20px;
                 display: flex;
                 flex-direction: column;
-                min-height: 100vw;
-
-                @include mq(sm) {
-                    min-height: auto;
-                    width: 33.34%;
-                    padding: 2vw;
-                }
+                min-height: auto;
+                width: 33.34%;
+                padding: 2vw;
+                margin-bottom: 2vw;
 
                 &.-active {
                     box-shadow: 0 10px 20px $lightGray;

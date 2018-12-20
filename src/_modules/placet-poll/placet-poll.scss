@@ -1,0 +1,107 @@
+.placet-poll {
+    background: $fadedIndigo;
+    padding: 8vw 8vw 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content-block {
+        width: 70%;
+        margin: 0 auto 6vw;
+
+        &__title {
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__wrapper {
+        width: 100%;
+    }
+
+    &__form {
+        background: $white;
+        padding: 4vw;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        &__title {
+            color: $mainColor;
+            margin: 0 0 2vw;
+            text-transform: uppercase;
+            font-family: $titleFont;
+            font-weight: 300;
+            text-align: center;
+            font-size: 2.5vw;
+        }
+
+        &__input {
+            margin: 0 2vw;
+        }
+
+        &__group {
+            display: flex;
+            justify-content: center;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 2vw;
+            padding-top: 2vw;
+        }
+
+        &__label{
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            display: block;
+        }
+
+        &__radio {
+            position: absolute;
+            left: -9999px;
+
+            &:checked {
+                & + label {
+                    opacity: 1;
+                    color: $golden;
+                }
+            }
+        }
+
+        &__radio-label {
+            @include trans;
+            opacity: .5;
+            border-radius: 50%;
+            border:1px solid;
+            color: $midGray;
+            font-weight: 300;
+            font-size:1.8vw;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__slider {
+        .slick-arrow {
+            display: none;
+        }
+        .slick-dots {
+            bottom: -30px;
+
+            li button:before {
+                color: $vibrantGolden;
+            }
+
+            li.slick-active button:before {
+                color: $vibrantGolden;
+            }
+        }
+    }
+}

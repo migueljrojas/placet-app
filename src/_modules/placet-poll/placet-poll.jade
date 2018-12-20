@@ -1,0 +1,34 @@
+include ../slider/slider
+include ../content-block/content-block
+
+mixin placet-poll(formData, hidePoll)
+    .placet-poll
+        .placet-poll__wrapper
+            +content-block(false, formData.content.title, formData.content.text, false, 'white')
+            
+            if !hidePoll
+                form.placet-poll__form
+                    h3.placet-poll__form__title=formData.form.title
+
+                    +slider('placet-poll__slider', 'all')
+                        each question, index in formData.form.questions 
+                            .placet-poll__slide
+                                label.placet-poll__form__label= question.label
+                                
+                                if formData.form.type == 'satisfaction'
+                                    .placet-poll__form__group
+                                        - for (var i = 0; i < 5; ++i) {
+                                            .placet-poll__form__input
+                                                input.placet-poll__form__radio(type="radio", id="satisfaction-#{index + 1}-#{i + 1}", name="satisfaction-#{index}")
+                                                label.placet-poll__form__radio-label(for="satisfaction-#{index + 1}-#{i + 1}")= i+1
+                                        - }
+
+                                else
+                                    .placet-poll__form__group
+                                        .placet-poll__form__input
+                                            input.placet-poll__form__radio(type="radio", id="#{formData.form.type}-#{index}", name="#{formData.form.type}-#{index}")
+                                            label.placet-poll__form__radio-label(for="#{formData.form.type}-#{index}") Sí
+                                        .placet-poll__form__input
+                                            input.placet-poll__form__radio(type="radio", id="#{formData.form.type}-#{index + 1}", name="#{formData.form.type}-#{index}")
+                                            label.placet-poll__form__radio-label(for="#{formData.form.type}-#{index + 1}") No
+                                    

@@ -1,0 +1,21 @@
+{
+    "content":{
+        "title":"GRACIAS POR COMPRAR EN PLACÈT!",
+        "text":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+    },
+    "form":{
+        "type":"satisfaction",
+        "title":"Por favor, evalÚe su experiencia con PlacÉt",
+        "questions":[
+            {
+                "label":"¿Qué tan satisfecho se encuentra con el proceso de compra que acaba de finalizar?"
+            },
+            {
+                "label":"¿Sed ut perspiciatis unde omnis iste natus error sit volup?"
+            },
+            {
+                "label":"¿voluptatem accusantium doloremque laudantium, totam rem aperiam?"
+            }
+        ]
+    }
+}

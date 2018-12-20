@@ -2,6 +2,8 @@
 
 // Constructor
 var Footer = function() {
+    var appoinmentCols = $('.primera-cita--agendar__form__col');
+    
     if ( $('#monthPicker').length > 0 ) {
         $('#monthPicker').monthly({
             mode: 'picker',
@@ -25,6 +27,11 @@ var Footer = function() {
             ]
         });
     }
+
+    appoinmentCols.on('click', function() {
+        appoinmentCols.removeClass('-active');
+        $(this).addClass('-active');
+    });
 };
 
 module.exports = Footer;

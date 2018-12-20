@@ -30,6 +30,11 @@ optgroup,
 select,
 textarea {
     font-family: $mainFont;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
 }
 
 a {

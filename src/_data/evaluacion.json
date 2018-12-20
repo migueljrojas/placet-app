@@ -1,0 +1,21 @@
+{
+    "content":{
+        "title":"Evalue esta CITA",
+        "text":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae."
+    },
+    "form":{
+        "type":"evaluacion",
+        "title":"Por favor, evalÚe ESTA VISITA",
+        "questions":[
+            {
+                "label":"¿Al cliente le gustó el modelo servicio de Placét?"
+            },
+            {
+                "label":"¿Sed ut perspiciatis unde omnis iste natus error sit volup?"
+            },
+            {
+                "label":"¿voluptatem accusantium doloremque laudantium, totam rem aperiam?"
+            }
+        ]
+    }
+}
