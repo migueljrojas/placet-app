@@ -4,7 +4,7 @@
     position: relative;
 
     &--login {
-        background: url('/images/inicio/about-main.jpg') no-repeat center center / cover;
+        background: $mainColor;
         align-items: center;
         justify-content: center;
 
@@ -36,6 +36,10 @@
 
             strong {
                 font-weight: 500;
+            }
+
+            a {
+                color: $white;
             }
         }
     }
@@ -91,12 +95,17 @@
             left: 0;
             bottom: 0;
             right: 0;
-            border-radius: 1000px;
+            border-radius: 50%;
             overflow: hidden;
             margin: 1vw;
 
             img {
-
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate3d(-50%, -50%, 0);
+                min-width: 100%;
+                min-height: 100%;
             }
         }
     }
@@ -125,6 +134,10 @@
             &.-active {
                 opacity: 1;
                 pointer-events: all;
+            }
+
+            &.-hidden {
+                display: none !important;
             }
         }
 
@@ -556,7 +569,7 @@
             justify-content: center;
             align-items: center;
             padding: 0 7.5vw;
-            background: $fadedIndigo;
+            background: $mainColor;
             position: relative;
         }
 
@@ -744,6 +757,43 @@
                 opacity: 1;
                 padding: 0 4vw 3vh 4.3vw;
             }
+        }
+    }
+
+    &--como-funciona-video {
+        &__over {
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            z-index: 2;
+            padding: 4vw;
+            color: $white;
+
+            .play-button {
+                position: absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                margin: auto;
+            }
+        }
+
+        &__title {
+            font-family: $titleFont;
+            margin: 0 0 2vw;
+            font-size: 3.5vw;
+            text-transform: uppercase;
+            font-weight:300;
+            width: 50%;
+        }
+
+        &__text {
+            margin: 0;
+            font-size: 1.6vw;
+            width: 50%;
         }
     }
 }
