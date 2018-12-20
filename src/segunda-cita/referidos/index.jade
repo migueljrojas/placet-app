@@ -1,7 +1,16 @@
 extends ../../_layouts/base
 
+include ../../_modules/content-block/content-block
+include ../../_modules/uiform/uiform
+
+
 block config
   - var baseUrl = '../../'
 
 block content
-    main.segunda-cita.segunda-cita--evaluacion
+    main.segunda-cita.segunda-cita--referidos
+        .col-half.segunda-cita__col.segunda-cita__col--intro.segunda-cita--referidos__col.segunda-cita--referidos__col--intro
+            +content-block('Club PLacét', 'REFIERA A UN AMIGO Y GANE', 'Sólo debe referir a uno de sus amigos que aún no están inscritos en PLACÉT.<br> <br> Por cada amigo que refiera y haga su primera compra, recibirá un crédito en prendas de PLACÉT por $X00,000.', false, 'white')
+        .col-half.segunda-cita__col.segunda-cita--referidos__col.segunda-cita--referidos__col--form
+            h3.segunda-cita--referidos__title Ingrese la información de la persona que quisiera recomendar
+            +uiform(site.data.referidoDeCliente, 'Referir Amigo', 'light')

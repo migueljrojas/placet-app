@@ -9,7 +9,7 @@ mixin content-block(subtitle, title, text, link, mode, linkAlt, modal)
             h2.content-block__title=title
 
         if text
-            p.content-block__text=text
+            p.content-block__text!=text
 
         .content-block__wrapper
             if link

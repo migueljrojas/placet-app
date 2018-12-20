@@ -38,10 +38,10 @@ block content
                         +quantity-selector('1')
 
                 .segunda-cita--producto__inputs
-                    +uiform(site.data.medidasCliente, 'Agregar al carro de compras', 'light')
+                    h4.segunda-cita--producto__inputs__title Ajustes de prenda
+                    +uiform(site.data.ajustesCliente, 'Agregar al carro de compras', 'light', true)
 
                 .segunda-cita--producto__wrapper.segunda-cita--producto__wrapper--social
-                    a.segunda-cita--producto__cta-button(href="#") Agregar al carro de compras
                     a._delete(href="#")
                         i.fa.fa-times
                         span Eliminar
