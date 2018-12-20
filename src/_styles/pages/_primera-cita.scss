@@ -85,7 +85,7 @@
         height: 90vh;
         &__col {
             &--description {
-                background: $fadedIndigo;
+                background: $mainColor;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -168,7 +168,7 @@
         &--bienvenida {
             position: absolute;
             top: 0;
-            background: $fadedIndigo;
+            background: $mainColor;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -235,7 +235,7 @@
                 display: flex;
                 align-items: flex-start;
                 justify-content: center;
-                background: $fadedIndigo;
+                background: $mainColor;
                 flex-direction: column;
                 padding-left: 5vw;
 
@@ -581,7 +581,7 @@
             padding: 2vw 2.5vw;
 
             &--list {
-                background: $fadedIndigo;
+                background: $mainColor;
                 position: relative;
                 z-index: 2;
             }

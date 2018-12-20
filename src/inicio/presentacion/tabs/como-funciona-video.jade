@@ -1,0 +1,16 @@
+include ../../../_modules/play-button/play-button
+include ../../../_modules/video-overlay/video-overlay
+
+mixin tab-como-funciona-video()
+    .tab.tab--como-funciona-video
+        .tab--como-funciona-video__wrapper.js-video-parent
+            .tab--como-funciona-video__image
+                img(src="/images/inicio/como-funciona-video.jpg")
+            +video-overlay
+            .tab--como-funciona-video__over
+                +play-button('big')
+                .tab--como-funciona-video__data
+                    h1.tab--como-funciona-video__title cómo funciona placét
+                    p.tab--como-funciona-video__text Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        
+        

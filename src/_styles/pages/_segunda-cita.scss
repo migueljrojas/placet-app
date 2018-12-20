@@ -11,7 +11,7 @@
         padding: 4vw;
 
         &--intro {
-            background: $fadedIndigo;
+            background: $mainColor;
 
             .content-block {
                 &__title {
@@ -159,7 +159,7 @@
 
         &__banner {
             height: 40%;
-            background: $fadedIndigo;
+            background: $mainColor;
             width: 100%;
             padding: 3vw;
             display: flex;
