@@ -1,7 +1,32 @@
 extends ../../_layouts/base
 
+include ../../_modules/content-block/content-block
+include ../../_modules/quantity-selector/quantity-selector
+
 block config
   - var baseUrl = '../../'
 
 block content
-    main.segunda-cita.segunda-cita--gift-card
+    main.segunda-cita.segunda-cita--giftcard
+        .col-third.segunda-cita__col.segunda-cita__col--intro.segunda-cita--giftcard__col.segunda-cita--giftcard__col--intro
+            .segunda-cita--giftcard__content-block
+                +content-block('Registro de Regalos PLacét', 'Regale la exclusividad del Club PlacÉt', false, false, 'white')
+                .segunda-cita--giftcard__card
+                    img(src="/images/giftcard/giftcard.png")
+        .col-two-thirds.segunda-cita__col.segunda-cita--giftcard__col.segunda-cita--giftcard__col--form
+            form.segunda-cita--giftcard__form.uiform--light
+                +content-block(false, 'Compre una GiftCard PlacÉt', 'La tarjeta de regalo de Placét está lista para usar, en un sobre claramente marcado con la cantidad de su regalo. Las tarjetas de regalo se pueden canjear en línea.', false, false)
+                .segunda-cita--giftcard__form__inputs
+                    .segunda-cita--giftcard__form__group
+                        label.segunda-cita--giftcard__form__label Elija el valor de su tarjeta de regalo
+                        input.segunda-cita--giftcard__form__input.uiform__input(type="number", placeholder="$")
+                    .segunda-cita--giftcard__form__group
+                        label.segunda-cita--giftcard__form__label ¿Cuántas tarjetas desea regalar?
+                        .segunda-cita--giftcard__form__input
+                            +quantity-selector(1)
+                    .segunda-cita--giftcard__form__group
+                        button.segunda-cita--giftcard__form__submit() AGREGAR AL CARRO DE COMPRAS
+
+            .segunda-cita--giftcard__cta
+                h4.segunda-cita--giftcard__cta-text Adicione personas a su lista de regalos
+                a.segunda-cita--giftcard__cta-btn(href="#") Registrar persona

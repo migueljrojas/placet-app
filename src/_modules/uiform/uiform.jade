@@ -13,9 +13,11 @@ mixin uiform(config, buttonText, mode, innerForm)
 
                         if input.type == 'select' 
                             select.uiform__input(class='uiform__input--#{input.type}', id=input.id, name=input.id)
-                                each option in input.options
-                                    option=option 
-
+                                each option, index in input.options
+                                    if index == 0
+                                        option(disabled, selected, hidden)=option
+                                    else 
+                                        option=option
                         if input.type == 'textarea'
                             textarea.uiform__input(placeholder= input.placeholder, class='uiform__input--#{input.type}', id=input.id, name=input.id)
                         
@@ -43,8 +45,11 @@ mixin uiform(config, buttonText, mode, innerForm)
 
                         if input.type == 'select' 
                             select.uiform__input(class='uiform__input--#{input.type}', id=input.id, name=input.id)
-                                each option in input.options
-                                    option=option 
+                                each option, index in input.options
+                                    if index == 0
+                                        option(disabled, selected, hidden)=option
+                                    else 
+                                        option=option
 
                         if input.type == 'textarea'
                             textarea.uiform__input(placeholder= input.placeholder, class='uiform__input--#{input.type}', id=input.id, name=input.id)

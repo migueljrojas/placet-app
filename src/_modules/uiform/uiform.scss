@@ -67,47 +67,40 @@
     }
 
     &__input {
-        &--anchor,
-        &--email,
-        &--text,
-        &--select,
-        &--number {
-            background: transparent;
-            width: 100%;
-            border: none;
-            border-bottom: 1px solid $white;
-            text-transform: capitalize;
-            height: 7vh;
-            color: $white;
-            font-size: 1.6vw;
+        background: transparent;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $white;
+        height: 7vh;
+        color: $white;
+        font-size: 1.6vw;
+        font-weight: 300;
+        letter-spacing: 1.2px;
+        padding-left: 0;
+        text-transform: uppercase;
+
+        &::placeholder {
+            @include trans;
+            opacity: 1;
             font-weight: 300;
+            color: $white;
             letter-spacing: 1.2px;
-            padding-left: 0;
             text-transform: uppercase;
+        }
+
+        &:focus {
+            color: $vibrantGolden;
+            outline: none;
+            border-bottom: 1px solid $vibrantGolden;
 
             &::placeholder {
-                @include trans;
-                opacity: 1;
-                font-weight: 300;
-                color: $white;
-                letter-spacing: 1.2px;
-                text-transform: uppercase;
+                opacity: 0;
             }
+        }
 
-            &:focus {
-                color: $vibrantGolden;
-                outline: none;
-                border-bottom: 1px solid $vibrantGolden;
-
-                &::placeholder {
-                    opacity: 0;
-                }
-            }
-
-            &:focus + label {
-                color: $vibrantGolden;
-                opacity: 1;
-            }
+        &:focus + label {
+            color: $vibrantGolden;
+            opacity: 1;
         }
 
         &--checkbox {
@@ -117,7 +110,7 @@
             &:checked {
                 & + #{$uiform}__label {
                     color: $golden;
-                    
+
                     &:after {
                         opacity: 1;
                     }
@@ -160,26 +153,20 @@
         }
 
         #{$uiform}__input {
-            &--anchor,
-            &--email,
-            &--text,
-            &--select,
-            &--number {
-                border-bottom: 1px solid $lightGray;
+            border-bottom: 1px solid $lightGray;
+            color: $lightGray;
+
+            &::placeholder {
                 color: $lightGray;
+            }
 
-                &::placeholder {
-                    color: $lightGray;
-                }
+            &:focus {
+                color: $vibrantGolden;
+                border-bottom: 1px solid $vibrantGolden;
+            }
 
-                &:focus {
-                    color: $vibrantGolden;
-                    border-bottom: 1px solid $vibrantGolden;
-                }
-
-                &:focus + label {
-                    color: $vibrantGolden;
-                }
+            &:focus + label {
+                color: $vibrantGolden;
             }
         }
 

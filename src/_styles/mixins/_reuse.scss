@@ -184,7 +184,7 @@
     }
 }
 
-@mixin button ($fontSize: 1vw, $btnBackground: transparent, $paddTopBottom: .7vw, $paddLeftRight: 1.5vw, $borderColor: $golden, $btnColor: $golden, $btnSize: 100%) {
+@mixin button ($fontSize: 1.6vw, $btnBackground: transparent, $paddTopBottom: 1.5vw, $paddLeftRight: 1.5vw, $borderColor: $golden, $btnColor: $golden, $btnSize: 100%) {
     @include trans;
 
     background: $btnBackground;
@@ -199,6 +199,7 @@
     cursor: pointer;
     text-align: center;
     width: $btnSize;
+    letter-spacing: 1.2px;
 
     &:hover,
     &:focus {
