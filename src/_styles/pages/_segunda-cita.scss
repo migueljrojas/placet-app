@@ -81,7 +81,7 @@
         &__content {
             height: 75vh;
             width: 100%;
-            padding: 3vw;
+            padding: 0 3vw;
         }
 
         &__title {
@@ -185,169 +185,288 @@
             }
         }
     }
-}
 
-.carro-de-compras {
-    &__list {
-        background: $lightestGray;
-        padding: 20px;
+    &--producto {
+        height: 90vh;
+        display: flex;
+        width: 100vw;
 
-        @include mq(sm) {
-            padding: 7vw;
+        &__col {
+            height: 100%;
+            position: relative;
+
+            &--image {
+                width: 45vw;
+            }
+
+            &--content {
+                width: 55vw;
+                padding: 5vw;
+            }
+        }
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        .fa-search {
+            position: absolute;
+            top: 2vw;
+            left: 2vw;
+            font-size: 5vw;
+            color: $white;
+        }
+
+        &__form {
+            width: 100%;
         }
 
         &__title {
-            text-align: center;
-            color: $black;
-            text-transform: uppercase;
+            color: $indigo;
             font-family: $titleFont;
             margin: 0;
-            padding-bottom: 20px;
-            font-size: 24px;
+            width: 100%;
+            font-size: 3.5vw;
+            padding-bottom: 1vw;
+            font-weight: 100;
+        }
+
+        &__text {
+            margin: 0;
+            color: $midGray;
+            position: relative;
+            font-size: 1.2vw;
+            padding-bottom: 2vw;
+            margin-bottom: 2vw;
+            letter-spacing: 1.2px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 10%;
+                height: 1px;
+                background: $vibrantGolden;
+            }
+        }
+
+        &__price {
+            display: flex;
+            font-size: 2.5vw;
+            padding-bottom: 2vw;
+        }
+
+        &__wrapper  {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 3vw;
+
+            &--social {
+                flex-direction: column;
+                align-items: flex-end;
+
+                ._delete {
+                    margin-top: 3vw;
+                    color: $golden;
+                    text-transform: uppercase;
+
+                    span {
+                        font-size: 1.4vw;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        &__color-selector {
+            width: 32%;
+
+            &__container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &__button {
+                position: absolute;
+                left: -9999px;
+
+                &:checked {
+                    & + label {
+                        border: 3px solid $golden;
+                    }
+                }
+            }
+
+            &__label {
+                display: block;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 3px solid transparent;
+                margin-right: 1.5vw;
+            }
+        }
+
+        &__label {
+            color: $midGray;
+            font-weight: 100;
+            margin-bottom: 1vw;
+            margin: 0 0 1vw 0;
+            font-size: 1.7vw;
+        }
+
+        &__valor {
+            width: 35%;
+            flex-grow: 2;
+        }
+
+        &__quantity {
+            width: 32%;
+            height: 10vh;
+
+            .quantity-selector {
+                justify-content: flex-start;
+                button {
+                    outline: none;
+                }
+
+                i {
+                    color: $midGray;
+                }
+
+                span {
+                    padding: 0 3vw;
+                    font-size: 2vw;
+                }
+            }
+        }
+
+        &__cta-button {
+            background: transparent;
+            color: $vibrantGolden;
+            border: 1px solid $vibrantGolden;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            padding: 1.5vw 4vw;
 
             @include mq(sm) {
-                padding-bottom: 3vw;
-                font-size: 3vw;
+            }
+        }
+
+        &__description {
+            &__title {
+                color: $midGray;
+                border-bottom: 1px solid $lightGray;
+                padding-bottom: 1vw;
+                margin-bottom: 1vw;
+                font-size: 1.5vw;
+            }
+
+            &__text {
+                font-size: 1.3vw;
+                margin-bottom: 2vw;
+            }
+        }
+
+        &__views {
+            display: flex;
+        }
+
+        &__view {
+            height: 15vh;
+            margin-right: 2vw;
+
+            img {
+                height: 100%;
+                width: auto;
             }
         }
     }
+}
 
-    &__table {
+.carro-de-compras {
+    display: flex;
+    flex-direction: column;
+
+    &__list-wrapper {
+        flex-grow: 2;
+        overflow: auto;
+        height: 51.35vw;
+    }
+
+    &__heading {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        width: 100%;
+        border-top: 1px solid $lightGray;
+        border-bottom: 1px solid $lightGray;
+        padding: 1.5vw 0;
 
-        &__heading {
-            display: none;
+        p {
+            text-transform: uppercase;
+        }
+    }
 
-            @include mq(sm) {
-                display: flex;
-                width: 100%;
-                border-top: 1px solid $lightGray;
-                border-bottom: 1px solid $lightGray;
-                padding: 1vw 0;
-            }
+    &__cell {
+        padding-right: 2.5vw;
+
+        &:nth-child(1) {
+            width: 20%;
+        }
+        &:nth-child(2) {
+            width: 29%;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        &:nth-child(3) {
+            text-align: none;
+            width: 16%;
         }
 
-        &__cell {
-            padding-right: 5px;
+        &:nth-child(4) {
+            width: 18%;
+            text-align: center;
+        }
 
-            @include mq(sm) {
-                padding-right: 3vw;
-            }
+        &:nth-child(5) {
+            text-align: none;
+            width: 16%;
+        }
 
-            &:nth-child(1) {
-                width: 30%;
-
-                @include mq(sm) {
-                    width: 18%;
-                }
-            }
-            &:nth-child(2) {
-                width: 70%;
-                padding-left: 10px;
-                margin-bottom: 30px;
-
-                @include mq(sm) {
-                    width: 23%;
-                    padding-left: 0;
-                    margin-bottom: 0;
-                }
-            }
-            &:nth-child(3) {
-                width: 33.33%;
-                text-align: center;
-
-                @include mq(sm) {
-                    text-align: none;
-                    width: 16%;
-                }
-
-                label {
-                    text-transform: uppercase;
-                    color: $lightGray;
-                    font-weight: 100;
-
-                    @include mq(sm) {
-                        display: none;
-                    }
-                }
-            }
-
-            &:nth-child(4) {
-                width: 33.33%;
-
-                @include mq(sm) {
-                    width: 16%;
-                }
-
-                label {
-                    text-transform: uppercase;
-                    color: $lightGray;
-                    font-weight: 100;
-
-                    @include mq(sm) {
-                        display: none;
-                    }
-                }
-            }
-
-            &:nth-child(5) {
-                width: 33.33%;
-                text-align: center;
-
-                @include mq(sm) {
-                    text-align: none;
-                    width: 14%;
-                }
-
-                label {
-                    text-transform: uppercase;
-                    color: $lightGray;
-                    font-weight: 100;
-
-                    @include mq(sm) {
-                        display: none;
-                    }
-                }
-            }
-
-            &:nth-child(6) {
-                width: 12%;
-            }
-
-            p {
-                font-size: 12px;
-                color: $lightGray;
-                text-transform: uppercase;
-                margin: 0;
-
-                @include mq(sm) {
-                    font-size: 1.2vw;
-                }
-            }
+        p {
+            font-size: 1.5vw;
+            color: $midGray + #222;
+            margin: 0;
         }
     }
 
     &__item {
         flex-wrap: wrap;
-        padding: 10px 0;
         display: flex;
         width: 100%;
         border-bottom: 1px solid $lightGray;
-        border-top: 1px solid $lightGray;
         position: relative;
-        margin-bottom: 30px;
+        padding: 0 0 3vw;
+        border-top: none;
+        margin-bottom: 3vw;
 
-        @include mq(sm) {
-            padding: 1vw 0;
-            border-top: none;
-            margin-bottom: 3vw;
+        &:first-child {
+            padding: 3vw 0;
         }
 
         &__image {
-            @include img(130%);
+            @include img(140%);
         }
 
         &__description {
@@ -357,6 +476,7 @@
                 font-size: 18px;
                 margin-top: 0;
                 line-height: 1.3;
+                font-weight: 300;
 
                 @include mq(sm) {
                     font-size: 1.4vw;
@@ -382,13 +502,23 @@
             }
         }
 
-        &__quantity {
-            text-align: center;
+        &__actions {
+            position: absolute;
+            left: 0;
+            bottom: 3vw;
+            right: 0;
+            padding-left: 20%;
+            display: flex;
+            justify-content: space-between;
 
-            @include mq(sm) {
-                text-align: none;
-                display: flex;
-                align-items: center;
+            a {
+                color: $golden;
+                text-transform: uppercase;
+
+                span {
+                    font-size: 1.4vw;
+                    margin-left: 10px;
+                }
             }
         }
 
