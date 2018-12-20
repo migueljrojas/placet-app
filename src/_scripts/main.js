@@ -22,9 +22,6 @@ $(function() {
     new DataSwitcher();
     new Multirange();
     new Price();
-<<<<<<< HEAD
     new EgModal();
-=======
     new Faqs();
->>>>>>> 5380cc9519f0cd8402b5c91569f63ad8228bfc46
 });
