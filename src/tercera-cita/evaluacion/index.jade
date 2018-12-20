@@ -1,7 +1,10 @@
 extends ../../_layouts/base
 
+include ../../_modules/placet-poll/placet-poll
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.tercera-cita.tercera-cita--evaluacion
+        +placet-poll(site.data.evaluacion)

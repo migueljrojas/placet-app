@@ -1,7 +1,15 @@
 extends ../../_layouts/base
 
+include ../../_modules/content-block/content-block
+include ../../_modules/uiform/uiform
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.tercera-cita.tercera-cita--agendar
+        .col-half.tercera-cita__col.tercera-cita__col--intro.tercera-cita--agendar__col.tercera-cita--agendar__col--intro
+            +content-block('Próxima cita', 'AGENDAR UNA PRÓXIMA CITA', 'Por favor, escoja la mejor opción para una siguiente cita', false, 'white')
+        .col-half.tercera-cita__col.tercera-cita--agendar__col.tercera-cita--agendar__col--form
+            h3.tercera-cita--agendar__title ¿Cuándo quiere que lo visitemos de nuevo?
+            +uiform(site.data.proximaCita, 'Agendar cita', 'light')

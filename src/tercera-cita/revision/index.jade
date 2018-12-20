@@ -1,7 +1,97 @@
 extends ../../_layouts/base
 
+include ../../_modules/slider/slider
+include ../../_modules/product/product
+include ../../_modules/content-block/content-block
+include ../../_modules/quantity-selector/quantity-selector
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.tercera-cita.tercera-cita--revision
+        .col-two-thirds.tercera-cita__col.tercera-cita--revision__main
+            .tercera-cita--revision__header
+                h1.tercera-cita--revision__title Revisión de su orden
+                .tercera-cita--revision__quantity
+                    span 5
+                    span prendas
+
+            .tercera-cita--revision__content
+                .carro-de-compras
+                    .carro-de-compras__heading
+                        .carro-de-compras__cell
+                            p item
+                        .carro-de-compras__cell
+                            p decripción
+                        .carro-de-compras__cell
+                            p precio 
+                        .carro-de-compras__cell
+                            p cantidad
+                        .carro-de-compras__cell
+                            p total
+                    .carro-de-compras__list-wrapper
+                        .carro-de-compras__list
+                            - for (var i = 0; i < 5; ++i) {
+                                .carro-de-compras__item
+                                    
+                                    .carro-de-compras__cell
+                                        .carro-de-compras__item__image
+                                            img(src='/images/tienda/checkout-item.png')
+                                    
+                                    .carro-de-compras__cell
+                                        .carro-de-compras__item__description
+                                            h3 Vestido Cerruti Azul
+                                            p 
+                                                | SKU: VE03887-13 
+                                                br
+                                                | Color: Azul Oscuro
+                                                br
+                                                | Talla: L
+                                                br
+                                                | Drop 4 
+                                    .carro-de-compras__cell
+                                        span.carro-de-compras__item__price $944.000
+                                    
+                                    .carro-de-compras__cell
+                                        .carro-de-compras__item__quantity
+                                            +quantity-selector('1')
+                                            
+                                    .carro-de-compras__cell
+                                        span.carro-de-compras__item__amount $944.000
+            
+                                    .carro-de-compras__item__actions
+                                        a._delete(href="#")
+                                            i.fa.fa-times
+
+                            - }
+
+        .col-third.tercera-cita__col.tercera-cita--revision__aside
+            .tercera-cita--revision__related-products
+                h3.tercera-cita--revision__related-products__title Las personas que compraron este producto, también compraron:
+
+                +slider('tercera-cita--revision__related-products__slider', 'alt')
+                    - for (var i = 0; i < 3; ++i) {
+                        .tercera-cita--revision__related-products__slide
+                            .tercera-cita--revision__related-products__group
+                                .tercera-cita--revision__related-products__item
+                                    +product('/images/tienda/product-1.jpg', 'vestido cerruti gris', '$944.000')
+                                .tercera-cita--revision__related-products__item
+                                    +product('/images/tienda/product-2.jpg', 'vestido austin azul', '$1.144.500')
+                    - }
+            
+            .tercera-cita--revision__checkout
+                .tercera-cita--revision__checkout__cta
+                    .carro-de-compras__cta__subtotal
+                        p Subtotal
+                        span $944.000
+                    .carro-de-compras__cta__delivery
+                        p Envío
+                        span gratis
+                    input.carro-de-compras__cta__code(type="text", placeholder="Ingresar Codigo Promocional")
+                    .carro-de-compras__cta__total
+                        p total
+                        span $944.000
+                    .carro-de-compras__cta__buttons
+                        button.carro-de-compras__cta__button finalizar compra
+           

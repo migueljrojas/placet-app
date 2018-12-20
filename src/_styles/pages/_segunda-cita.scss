@@ -1,4 +1,5 @@
-.segunda-cita {
+.segunda-cita,
+.tercera-cita {
     display: flex;
     height: 90vh;
 
@@ -103,9 +104,9 @@
 
         &__related-products {
             flex-grow: 2;
-            background: $lightestGray;
+            background: $lightestGray - #111;
             width: 100%;
-            padding: 3vw;
+            padding: 3vw 3vw 2vw;
 
             &__title {
                 color: $mainColor;
@@ -183,6 +184,13 @@
                     margin-bottom: 1.8vw;
                 }
             }
+        }
+
+        &__checkout {
+            height: 40%;
+            background: $lightestGray;
+            width: 100%;
+            padding: 2vw 3vw;
         }
     }
 
@@ -477,7 +485,8 @@
         }
     }
 
-    &--referidos {
+    &--referidos,
+    &--agendar {
         &__title {
             text-transform: uppercase;
             color: $golden;
@@ -507,6 +516,9 @@
                     &__text {
                         font-size: 1.5vw;
                         margin-bottom: 6vw;
+                        width: 90%;
+                        margin-left: auto;
+                        margin-right: auto;
                     }
                 }
             }
@@ -522,6 +534,31 @@
                     }
                 }
             }
+        }
+    }
+
+    &--agendar {
+        &__col {
+            &--form {
+                text-align: center;
+
+                .uiform {
+                    &__wrapper{ 
+                        width: 70%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    &__group {
+                        padding: 1vw 0 3vw 0;
+                    }
+                }
+            }
+        }
+
+        &__title {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -895,6 +932,11 @@
             p {
                 margin: 0;
             }
+
+            span {
+                font-weight: 500;
+                text-transform: uppercase;
+            }
         }
 
         &__delivery {
@@ -911,10 +953,11 @@
 
             p {
                 margin: 0;
+            }
 
-                &:last-of-type {
-                    text-transform: uppercase;
-                }
+            span {
+                font-weight: 500;
+                text-transform: uppercase;
             }
         }
 
@@ -925,21 +968,17 @@
             text-align: center;
             text-transform: uppercase;
             color: $vibrantGolden;
-            font-size: 12px;
-            padding: 10px 0;
-            margin-bottom: 10px;
             border-left: none;
             border-right: none;
             outline: none;
             pointer-events: all;
             cursor: pointer;
-
-            @include mq(sm) {
-                font-size: 1.2vw;
-                padding: 1.5vw 0;
-                margin-bottom: 1vw;
-
-            }
+            background: transparent;
+            font-size: 1.4vw;
+            padding: 1.5vw 0;
+            margin-bottom: 1vw;
+            font-weight: 300;
+            letter-spacing: 1.2px;
 
             &::placeholder {
                 color: $vibrantGolden;
@@ -956,13 +995,8 @@
             justify-content: space-between;
             text-transform: uppercase;
             font-weight: 500;
-            font-size: 14px;
-            padding-bottom: 5px;
-
-            @include mq(sm) {
-                font-size: 1.6vw;
-                padding-bottom: .5vw;
-            }
+            align-items: center;
+            font-size: 1.6vw;
         }
 
         &__buttons {
@@ -978,16 +1012,10 @@
             text-transform: uppercase;
             color: $vibrantGolden;
             border: 1px solid $vibrantGolden;
-            background: transparent;
-            margin-top: 5px;
-            font-size: 12px;
-            padding: 10px;
-
-            @include mq(sm) {
-                margin-top: 1vw;
-                font-size: 1.2vw;
-                padding: 1vw;
-            }
+            background: transparent;            
+            margin-top: 1vw;
+            font-size: 1.2vw;
+            padding: 1.5vw 1vw;
         }
     }
 }

@@ -1,0 +1,11 @@
+[
+    {
+        "type":"select",
+        "label":"",
+        "options": [
+            "Elija una opción",
+            "Un Mes",
+            "Un año"
+        ]
+    }
+]
