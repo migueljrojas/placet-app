@@ -1,7 +1,47 @@
 extends ../../_layouts/base
 
+include ../../_modules/quantity-selector/quantity-selector
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.primera-cita.primera-cita--producto
+        .primera-cita--producto__col.primera-cita--producto__col--image
+            .primera-cita--producto__image
+                img(src="/images/tienda/checkout-item.png")
+            //- i.fa.fa-search
+        .primera-cita--producto__col.primera-cita--producto__col--content
+            form.primera-cita--producto__form
+                h2.primera-cita--producto__title Vestido Cerruti Azul
+                p.primera-cita--producto__text SKU: VE03887-13
+                span.primera-cita--producto__price $944.000
+                .primera-cita--producto__wrapper
+                    .primera-cita--producto__color-selector
+                        h2.primera-cita--producto__label Color
+                        .primera-cita--producto__color-selector__container
+                            .primera-cita--producto__color
+                                input.primera-cita--producto__color-selector__button(type="radio" id="color1", name="color")
+                                label.primera-cita--producto__color-selector__label(for="color1", style="background:#245687")
+                            .primera-cita--producto__color
+                                input.primera-cita--producto__color-selector__button(type="radio" id="color2", name="color")
+                                label.primera-cita--producto__color-selector__label(for="color2", style="background:#130358")
+                            .primera-cita--producto__color
+                                input.primera-cita--producto__color-selector__button(type="radio" id="color3", name="color")
+                                label.primera-cita--producto__color-selector__label(for="color3", style="background:#720374")
+                            
+                    .primera-cita--producto__quantity
+                        h2.primera-cita--producto__label Cantidad
+                        +quantity-selector('1')
+                .primera-cita--producto__wrapper.primera-cita--producto__wrapper--social
+                    a.primera-cita--producto__cta-button(href="#") preseleccionar esta prenda
+                .primera-cita--producto__description
+                    .primera-cita--producto__description__title Descripción
+                    .primera-cita--producto__description__text Chaleco con tela acolchada. Cuello alto con charretera y broche de presión. Cremallera en el frente con vivo en contraste. Bolsillos sesgados con ribete en contraste. Vivo en sisa. 100% Polyester. Forro: 100% Polyester. Lavar en seco. Importado
+                .primera-cita--producto__views
+                    .primera-cita--producto__view
+                        img(src="/images/tienda/product-1.jpg")
+                    .primera-cita--producto__view
+                        img(src="/images/tienda/product-2.jpg")
+                    .primera-cita--producto__view
+                        img(src="/images/tienda/product-3.jpg")

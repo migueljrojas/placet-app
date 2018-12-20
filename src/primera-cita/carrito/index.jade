@@ -1,7 +1,66 @@
 extends ../../_layouts/base
 
+include ../../_modules/quantity-selector/quantity-selector
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.primera-cita.primera-cita--carrito
+        .primera-cita--carrito__header
+            h2.primera-cita--carrito__title tienda online
+        .primera-cita--carrito__table
+            .primera-cita--carrito__table__heading
+                .primera-cita--carrito__table__cell
+                    p item
+                .primera-cita--carrito__table__cell
+                    p decripción
+                .primera-cita--carrito__table__cell
+                    p precio 
+                .primera-cita--carrito__table__cell
+                    p cantidad
+                .primera-cita--carrito__table__cell
+                    p total
+                .primera-cita--carrito__table__cell
+
+            .primera-cita--carrito__item
+                .primera-cita--carrito__table__cell
+                    .primera-cita--carrito__item__image
+                        img(src='/images/tienda/checkout-item.png')
+                .primera-cita--carrito__table__cell
+                    .primera-cita--carrito__item__description
+                        h3 Vestido Cerruti Azul
+                        p 
+                            | SKU: VE03887-13 
+                            br
+                            br
+                            | Color: Azul Oscuro
+                            br
+                            | Talla: L
+                            br
+                            | Drop 4 
+                .primera-cita--carrito__table__cell
+                    span.primera-cita--carrito__item__price $944.000
+                .primera-cita--carrito__table__cell
+                    .primera-cita--carrito__item__quantity
+                        +quantity-selector('1')
+                        
+                .primera-cita--carrito__table__cell
+                    span.primera-cita--carrito__item__amount $944.000
+                .primera-cita--carrito__table__cell
+                    button.primera-cita--carrito__item__delete-button
+                        i.material-icons close
+
+        .primera-cita--carrito__totals
+            .primera-cita--carrito__subtotal
+                p Subtotal
+                span $944.000
+            input.primera-cita--carrito__code(type="text", placeholder="Ingresar Codigo Promocional")
+            .primera-cita--carrito__delivery
+                p Envío gratis
+            .primera-cita--carrito__total
+                p total
+                span $944.000
+            .primera-cita--carrito__buttons
+                button.primera-cita--carrito__button finalizar compra
+                a.primera-cita--carrito__button(href="/tienda") seguir comprando

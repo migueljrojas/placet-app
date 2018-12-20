@@ -1,7 +1,79 @@
 extends ../../_layouts/base
 
+include ../../_modules/quantity-selector/quantity-selector
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.primera-cita.primera-cita--checkout
+        .primera-cita--checkout__header
+            h2.primera-cita--checkout__title tienda online
+        .primera-cita--checkout__table
+            .primera-cita--checkout__table__heading
+                .primera-cita--checkout__table__cell
+                    p item
+                .primera-cita--checkout__table__cell
+                    p decripción
+                .primera-cita--checkout__table__cell
+                    p precio 
+                .primera-cita--checkout__table__cell
+                    p cantidad
+                .primera-cita--checkout__table__cell
+                    p total
+                .primera-cita--checkout__table__cell
+
+            .primera-cita--checkout__item
+                .primera-cita--checkout__table__cell
+                    .primera-cita--checkout__item__image
+                        img(src='/images/tienda/checkout-item.png')
+                .primera-cita--checkout__table__cell
+                    .primera-cita--checkout__item__description
+                        h3 Vestido Cerruti Azul
+                        p 
+                            | SKU: VE03887-13 
+                            br
+                            br
+                            | Color: Azul Oscuro
+                            br
+                            | Talla: L
+                            br
+                            | Drop 4 
+                .primera-cita--checkout__table__cell
+                    span.primera-cita--checkout__item__price $944.000
+                .primera-cita--checkout__table__cell
+                    .primera-cita--checkout__item__quantity
+                        +quantity-selector('1')
+                        
+                .primera-cita--checkout__table__cell
+                    span.primera-cita--checkout__item__amount $944.000
+                .primera-cita--checkout__table__cell
+                    button.primera-cita--checkout__item__delete-button
+                        i.material-icons close
+            .primera-cita--checkout__item
+                .primera-cita--checkout__table__cell
+                    .primera-cita--checkout__item__image
+                        img(src='/images/tienda/checkout-item.png')
+                .primera-cita--checkout__table__cell
+                    .primera-cita--checkout__item__description
+                        h3 Vestido Cerruti Azul
+                        p 
+                            | SKU: VE03887-13 
+                            br
+                            br
+                            | Color: Azul Oscuro
+                            br
+                            | Talla: L
+                            br
+                            | Drop 4 
+                .primera-cita--checkout__table__cell
+                    span.primera-cita--checkout__item__price $944.000
+                .primera-cita--checkout__table__cell
+                    .primera-cita--checkout__item__quantity
+                        +quantity-selector('1')
+                        
+                .primera-cita--checkout__table__cell
+                    span.primera-cita--checkout__item__amount $944.000
+                .primera-cita--checkout__table__cell
+                    button.primera-cita--checkout__item__delete-button
+                        i.material-icons close
