@@ -1,7 +1,46 @@
 extends ../../_layouts/base
 
+include ../../_modules/quantity-selector/quantity-selector
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.segunda-cita.segunda-cita--producto
+        .segunda-cita--producto__col.segunda-cita--producto__col--image
+            .segunda-cita--producto__image
+                img(src="/images/tienda/checkout-item.png")
+            //- i.fa.fa-search
+        .segunda-cita--producto__col.segunda-cita--producto__col--content
+            form.segunda-cita--producto__form
+                h2.segunda-cita--producto__title Vestido Cerruti Azul
+                p.segunda-cita--producto__text SKU: VE03887-13
+                .segunda-cita--producto__wrapper
+                    .segunda-cita--producto__valor
+                        h2.segunda-cita--producto__label Valor
+                        span.segunda-cita--producto__price $944.000
+                    .segunda-cita--producto__color-selector
+                        h2.segunda-cita--producto__label Color
+                        .segunda-cita--producto__color-selector__container
+                            .segunda-cita--producto__color
+                                input.segunda-cita--producto__color-selector__button(type="radio" id="color1", name="color")
+                                label.segunda-cita--producto__color-selector__label(for="color1", style="background:#245687")
+                            .segunda-cita--producto__color
+                                input.segunda-cita--producto__color-selector__button(type="radio" id="color2", name="color")
+                                label.segunda-cita--producto__color-selector__label(for="color2", style="background:#130358")
+                            .segunda-cita--producto__color
+                                input.segunda-cita--producto__color-selector__button(type="radio" id="color3", name="color")
+                                label.segunda-cita--producto__color-selector__label(for="color3", style="background:#720374")
+                            
+                    .segunda-cita--producto__quantity
+                        h2.segunda-cita--producto__label Cantidad
+                        +quantity-selector('1')
+
+                .segunda-cita--producto__inputs
+                    +uiform(site.data.medidasCliente, 'Agregar al carro de compras', 'light')
+
+                .segunda-cita--producto__wrapper.segunda-cita--producto__wrapper--social
+                    a.segunda-cita--producto__cta-button(href="#") Agregar al carro de compras
+                    a._delete(href="#")
+                        i.fa.fa-times
+                        span Eliminar

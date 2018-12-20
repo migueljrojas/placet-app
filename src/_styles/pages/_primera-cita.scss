@@ -858,9 +858,10 @@
             margin: 0;
             color: $midGray;
             position: relative;
-            font-size: 1vw;
+            font-size: 1.2vw;
             padding-bottom: 2vw;
             margin-bottom: 2vw;
+            letter-spacing: 1.2px;
 
             &:after {
                 content: '';
