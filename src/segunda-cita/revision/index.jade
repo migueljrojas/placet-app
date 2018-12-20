@@ -1,7 +1,83 @@
 extends ../../_layouts/base
 
+include ../../_modules/slider/slider
+include ../../_modules/product/product
+include ../../_modules/content-block/content-block
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.segunda-cita.segunda-cita--revision
+        .col-two-thirds.segunda-cita__col.segunda-cita--revision__main
+            .segunda-cita--revision__header
+                h1.segunda-cita--revision__title Revisión de su orden
+                .segunda-cita--revision__quantity
+                    span 5
+                    span prendas
+
+            .segunda-cita--revision__content
+                .carro-de-compras
+                    .carro-de-compras__heading
+                        .carro-de-compras__cell
+                            p item
+                        .carro-de-compras__cell
+                            p decripción
+                        .carro-de-compras__cell
+                            p precio 
+                        .carro-de-compras__cell
+                            p cantidad
+                        .carro-de-compras__cell
+                            p total
+                        .carro-de-compras__cell
+                    .carro-de-compras__list-wrapper
+                        .carro-de-compras__list
+                            .carro-de-compras__item
+                                .carro-de-compras__cell
+                                    .carro-de-compras__item__image
+                                        img(src='../images/tienda/checkout-item.png')
+                                .carro-de-compras__cell
+                                    .carro-de-compras__item__description
+                                        h3 Vestido Cerruti Azul
+                                        p 
+                                            | SKU: VE03887-13 
+                                            br
+                                            | Color: Azul Oscuro
+                                            br
+                                            | Talla: L
+                                            br
+                                            | Drop 4 
+                                .carro-de-compras__cell
+                                    label Precio
+                                    span.carro-de-compras__item__price $944.000
+                                .carro-de-compras__cell
+                                    .carro-de-compras__item__quantity
+                                        label Cantidad
+                                        +quantity-selector('1')
+                                        
+                                .carro-de-compras__cell
+                                    label Total
+                                    span.carro-de-compras__item__amount $944.000
+                                .carro-de-compras__cell
+                                    button.carro-de-compras__item__delete-button
+                                        i.material-icons close
+                                        p eliminar
+        
+        .col-third.segunda-cita__col.segunda-cita--revision__aside
+            .segunda-cita--revision__related-products
+                h3.segunda-cita--revision__related-products__title Las personas que compraron este producto, también compraron:
+
+                +slider('segunda-cita--revision__related-products__slider', 'alt')
+                    - for (var i = 0; i < 3; ++i) {
+                        .segunda-cita--revision__related-products__slide
+                            .segunda-cita--revision__related-products__group
+                                .segunda-cita--revision__related-products__item
+                                    +product('/images/tienda/product-1.jpg', 'vestido cerruti gris', '$944.000')
+                                .segunda-cita--revision__related-products__item
+                                    +product('/images/tienda/product-2.jpg', 'vestido austin azul', '$1.144.500')
+                    - }
+            
+            .segunda-cita--revision__banner
+                +content-block('', 'Arme su propio Look', 'Puede combinar dos o más prendas, ordenarlas y probar cómo se ven', {'text':'Probar Ahora', 'url':'#'}, 'white')
+
+           

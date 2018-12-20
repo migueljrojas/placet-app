@@ -30,17 +30,20 @@
     }
 
     &__text {
-        color: $white;
+        color: $midGray;
         font-size: 1.6vw;
         margin: 0;
-        margin-bottom: 2vh;
+        margin-bottom: 3vw;
         letter-spacing: 1px;
+        line-height: 1.4;
     }
 
     &__link {
-        @include button($fontSize: 2vw, $btnColor: $vibrantGolden, $paddLeftRight: 4vw, $paddTopBottom: 1vw, $btnBackground: transparent, $borderColor: $vibrantGolden);
+        @include button($fontSize: 1.6vw, $btnColor: $vibrantGolden, $paddLeftRight: 4vw, $paddTopBottom: 1vw, $btnBackground: transparent, $borderColor: $vibrantGolden);
         margin: 0;
         text-decoration: none;
+        display: inline-block;
+        width: auto;
     }
 
     &--white {
@@ -55,11 +58,5 @@
         #{$cb}__text {
             color: $white;
         }
-
-        #{$cb}__link {
-            @include button($fontSize: 2vw, $btnColor: $vibrantGolden, $paddLeftRight: 4vw, $paddTopBottom: 1vw, $btnBackground: transparent, $borderColor: $vibrantGolden);
-            margin: 0;
-        }
-
     }
 }

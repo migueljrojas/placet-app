@@ -258,3 +258,31 @@
     font-weight: $fontWeight;
     font-style: $fontStyle;
 }
+
+@mixin img($ratio: 56.5%, $width: 100%, $mode: horizontal) {
+    position: relative;
+    overflow: hidden;
+    width: $width;
+    height: 0;
+    padding-bottom: $ratio;
+
+    @if $mode == horizontal {
+        img {
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @if $mode == vertical {
+        img {
+            position: absolute;
+            top:0;
+            left:0;
+            width: auto;
+            height: 100%;
+        }
+    }
+}
