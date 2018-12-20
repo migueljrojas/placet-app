@@ -513,4 +513,73 @@
             text-transform: uppercase;
         }
     }
+
+    &--modificar,
+    &--registrar {
+        display: flex;
+        height: 90vh;
+
+        &__col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            &--description {
+                background: $fadedIndigo;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 4vw;
+
+                .content-block {
+                    &__title {
+                        font-size: 3vw;
+                    }
+
+                    &__subtitle {
+                        font-size: 1.7vw;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 2vw;
+                    }
+
+                    &__text {
+                        font-size: 1.5vw;
+                    }
+                }
+            }
+
+            &--form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 7vw;
+                background: $white;
+
+                .uiform {
+                    &__wrapper {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                    }
+
+                    &__input {
+                        width: 25vw;
+                    }
+                }
+            }
+        }
+
+        &__button {
+            padding: 2vw 6vw;
+            color: $vibrantGolden;
+            background: transparent;
+            border: 1px solid $vibrantGolden;
+            text-transform: uppercase;
+            width: 90%;
+            text-align: center;
+            margin: 1vw 0;
+        }
+    }
 }

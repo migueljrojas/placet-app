@@ -10,7 +10,7 @@ block config
 
 block content
     main.segunda-cita.segunda-cita--revision
-        .col-two-thirds.segunda-cita__col.segunda-cita--revision__main
+        .segunda-cita__col.segunda-cita--revision__main
             .segunda-cita--revision__header
                 h1.segunda-cita--revision__title Revisión de su orden
                 .segunda-cita--revision__quantity
@@ -233,21 +233,21 @@ block content
                                         span Eliminar
 
 
-        .col-third.segunda-cita__col.segunda-cita--revision__aside
-            .segunda-cita--revision__related-products
-                h3.segunda-cita--revision__related-products__title Las personas que compraron este producto, también compraron:
-
-                +slider('segunda-cita--revision__related-products__slider', 'alt')
-                    - for (var i = 0; i < 3; ++i) {
-                        .segunda-cita--revision__related-products__slide
-                            .segunda-cita--revision__related-products__group
-                                .segunda-cita--revision__related-products__item
-                                    +product('/images/tienda/product-1.jpg', 'vestido cerruti gris', '$944.000')
-                                .segunda-cita--revision__related-products__item
-                                    +product('/images/tienda/product-2.jpg', 'vestido austin azul', '$1.144.500')
-                    - }
-            
-            .segunda-cita--revision__banner
-                +content-block('', 'Arme su propio Look', 'Puede combinar dos o más prendas, ordenarlas y probar cómo se ven', {'text':'Probar Ahora', 'url':'#'}, 'white')
+        //- .col-third.segunda-cita__col.segunda-cita--revision__aside
+        //-     .segunda-cita--revision__related-products
+        //-         h3.segunda-cita--revision__related-products__title Las personas que compraron este producto, también compraron:
+        //- 
+        //-         +slider('segunda-cita--revision__related-products__slider', 'alt')
+        //-             - for (var i = 0; i < 3; ++i) {
+        //-                 .segunda-cita--revision__related-products__slide
+        //-                     .segunda-cita--revision__related-products__group
+        //-                         .segunda-cita--revision__related-products__item
+        //-                             +product('/images/tienda/product-1.jpg', 'vestido cerruti gris', '$944.000')
+        //-                         .segunda-cita--revision__related-products__item
+        //-                             +product('/images/tienda/product-2.jpg', 'vestido austin azul', '$1.144.500')
+        //-             - }
+        //-     
+        //-     .segunda-cita--revision__banner
+        //-         +content-block('', 'Arme su propio Look', 'Puede combinar dos o más prendas, ordenarlas y probar cómo se ven', {'text':'Probar Ahora', 'url':'#'}, 'white')
 
            

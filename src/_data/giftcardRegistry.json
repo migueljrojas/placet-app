@@ -4,7 +4,11 @@
         "label":"Relación con esta persona",
         "options": [
             "",
-            "Familiar",
+            "Esposa",
+            "Hijo",
+            "Hija",
+            "Papa",
+            "Mama",
             "Amigo"
         ]
     },

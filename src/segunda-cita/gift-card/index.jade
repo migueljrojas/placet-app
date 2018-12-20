@@ -15,7 +15,7 @@ block content
                     img(src="/images/giftcard/giftcard.png")
         .col-two-thirds.segunda-cita__col.segunda-cita--giftcard__col.segunda-cita--giftcard__col--form
             form.segunda-cita--giftcard__form.uiform--light
-                +content-block(false, 'Compre una GiftCard PlacÉt', 'La tarjeta de regalo de Placét está lista para usar, en un sobre claramente marcado con la cantidad de su regalo. Las tarjetas de regalo se pueden canjear en línea.', false, false)
+                +content-block(false, 'Compre una GiftCard PlacÉt', 'Regale la experiencia PLACET a sus conocidos. Elija el valor de su Gift Card y nosotros nos encargaremos De atenderlo con el servicio exclusivo de PLACET', false, false)
                 .segunda-cita--giftcard__form__inputs
                     .segunda-cita--giftcard__form__group
                         label.segunda-cita--giftcard__form__label Elija el valor de su tarjeta de regalo
@@ -25,8 +25,17 @@ block content
                         .segunda-cita--giftcard__form__input
                             +quantity-selector(1)
                     .segunda-cita--giftcard__form__group
+                        label.segunda-cita--giftcard__form__label nombre del beneficiario
+                        input.segunda-cita--giftcard__form__input.uiform__input(type="text")
+                    .segunda-cita--giftcard__form__group
+                        label.segunda-cita--giftcard__form__label telefono del beneficiario
+                        input.segunda-cita--giftcard__form__input.uiform__input(type="number")
+                    .segunda-cita--giftcard__form__group
+                        label.segunda-cita--giftcard__form__label email del beneficiario
+                        input.segunda-cita--giftcard__form__input.uiform__input(type="email")
+                    .segunda-cita--giftcard__form__group
                         button.segunda-cita--giftcard__form__submit() AGREGAR AL CARRO DE COMPRAS
 
-            .segunda-cita--giftcard__cta
-                h4.segunda-cita--giftcard__cta-text Adicione personas a su lista de regalos
-                a.segunda-cita--giftcard__cta-btn(href="#") Registrar persona
+            //- .segunda-cita--giftcard__cta
+            //-     h4.segunda-cita--giftcard__cta-text Adicione personas a su lista de regalos
+            //-     a.segunda-cita--giftcard__cta-btn(href="#") Registrar persona
