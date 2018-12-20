@@ -12,6 +12,7 @@ var Faqs = require('../_modules/data-switcher/faqs');
 var Multirange = require('../_modules/multirange/multirange');
 var Price = require('../_modules/multirange/price');
 var EgModal = require('../_modules/eg-modal/eg-modal');
+var QuantitySelector = require('../_modules/quantity-selector/quantity-selector');
 
 $(function() {
     require('../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min');
@@ -24,4 +25,5 @@ $(function() {
     new Price();
     new EgModal();
     new Faqs();
+    new QuantitySelector();
 });
