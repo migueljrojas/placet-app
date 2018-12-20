@@ -2,27 +2,32 @@
     {
         "type":"text",
         "label":"Nombre",
-        "placeholder":"nombre"
+        "placeholder":"nombre",
+        "value":"Juan"
     },
     {
         "type":"text",
         "label":"Apellido",
-        "placeholder":"apellido"
+        "placeholder":"apellido",
+        "value":"Gomez"
     },
     {
         "type":"email",
         "label":"email",
-        "placeholder":"email"
+        "placeholder":"email",
+        "value":"juan.gomez@gmail.com"
     },
     {
         "type":"number",
         "label":"telefono",
-        "placeholder":"telefono"
+        "placeholder":"telefono",
+        "value":"310 222 3333"
     },
     {
         "type":"text",
         "label":"direccion casa",
-        "placeholder":"direccion casa"
+        "placeholder":"direccion casa",
+        "value":"Transv. 1 Este # 70-28 Apt 1012"
     },
     {
         "type":"select",
@@ -35,32 +40,26 @@
     },
     {
         "type":"text",
-        "label":"compañia donde trabaja",
-        "placeholder":"compañia donde trabaja"
-    },
-    {
-        "type":"text",
         "label":"direccion oficina",
-        "placeholder":"direccion oficina"
-    },
-    {
-        "type":"text",
-        "label":"profesión",
-        "placeholder":"profesión"
+        "placeholder":"direccion oficina",
+        "value":"Carrera 12 # 87-23 Of 201"
     },
     {
         "type":"text",
         "label":"fecha de nacimiento",
-        "placeholder":"fecha de nacimiento"
+        "placeholder":"fecha de nacimiento",
+        "value":"Junio 28 / 1963"
     },
     {
         "type":"text",
         "label":"contraseña",
-        "placeholder":"contraseña"
+        "placeholder":"contraseña",
+        "value":"********"
     },
     {
         "type":"text",
         "label":"repetir contraseña",
-        "placeholder":"repetir contraseña"
+        "placeholder":"repetir contraseña",
+        "value":"********"
     }
 ]

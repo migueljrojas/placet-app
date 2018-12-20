@@ -38,20 +38,20 @@
         &__content {
             text-align: center;
             width: 70%;
-    
+
             .content-block {
                 &__link {
                     width: auto;
                 }
             }
         }
-    
+
         &__icon {
             display: inline-block;
             width: 50px;
             height: 50px;
             margin-bottom: 3vw;
-    
+
             img{
                 width: 100%;
             }
@@ -62,6 +62,7 @@
         &__main {
             padding: 0;
             flex-direction: column;
+            width: 100vw;
         }
 
         &__aside {
@@ -468,11 +469,13 @@
             .content-block {
                 &__title {
                     font-size: 3vw;
+                    padding-bottom: 1.5vw;
+                    margin-bottom: 1.5vw;
                 }
 
                 &__text {
-                    font-size: 1.5vw;
-                    margin-bottom: 3vw;
+                    font-size: 1.3vw;
+                    margin-bottom: 1.5vw;
                 }
             }
         }
@@ -497,14 +500,15 @@
             margin-bottom: 3vw;
         }
         &__col {
-            padding: 7vw;
+            padding: 5vw;
 
             &--intro {
                 .content-block {
+                    margin-bottom: 0;
                     &__title {
                         font-size: 4.2vw;
                     }
-    
+
                     &__subtitle {
                         font-size: 1.7vw;
                         width: 80%;
@@ -512,13 +516,14 @@
                         margin-right: auto;
                         margin-bottom: 2vw;
                     }
-    
+
                     &__text {
                         font-size: 1.5vw;
                         margin-bottom: 6vw;
                         width: 90%;
                         margin-left: auto;
                         margin-right: auto;
+                        margin-bottom: 0;
                     }
                 }
             }
@@ -543,7 +548,7 @@
                 text-align: center;
 
                 .uiform {
-                    &__wrapper{ 
+                    &__wrapper{
                         width: 70%;
                         margin-left: auto;
                         margin-right: auto;
@@ -610,7 +615,7 @@
 
             .content-block {
                 width: 90%;
-                margin: 0 auto 6vw;
+                margin: 0 auto 2vw;
 
                 &__title {
                     font-size: 3vw;
@@ -670,16 +675,13 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
-
-                &:not(:last-child) {
-                    padding-bottom: 4vw;
-                }
+                padding-bottom: 2vw;
             }
 
             &__label {
                 text-transform: uppercase;
                 color: $golden;
-                font-size:1.6vw;
+                font-size: 1.6vw;
                 display: block;
                 width: 45%;
             }
@@ -693,28 +695,28 @@
             }
         }
 
-        &__cta {
-            width: 100%;
-            padding: 5vw;
-            background: $lightestGray;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        &__cta-text {
-            width: 40%;
-            font-size: 2.5vw;
-            color: $mainColor;
-            font-family: $titleFont;
-            font-weight: 300;
-            margin: 0;
-        }
-
-        &__cta-btn {
-            @include button();
-            width: 40%;
-        }
+        // &__cta {
+        //     width: 100%;
+        //     padding: 5vw;
+        //     background: $lightestGray;
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: center;
+        // }
+        //
+        // &__cta-text {
+        //     width: 40%;
+        //     font-size: 2.5vw;
+        //     color: $mainColor;
+        //     font-family: $titleFont;
+        //     font-weight: 300;
+        //     margin: 0;
+        // }
+        //
+        // &__cta-btn {
+        //     @include button();
+        //     width: 40%;
+        // }
     }
 }
 
@@ -1012,7 +1014,7 @@
             text-transform: uppercase;
             color: $vibrantGolden;
             border: 1px solid $vibrantGolden;
-            background: transparent;            
+            background: transparent;
             margin-top: 1vw;
             font-size: 1.2vw;
             padding: 1.5vw 1vw;

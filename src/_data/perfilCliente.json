@@ -1,18 +1,44 @@
 [
     {
-        "type":"text",
-        "label":"Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+        "type":"select",
+        "label":"Cual es su dress code de lunes a jueves?",
+        "options": [
+            "",
+            "formal",
+            "Casual",
+            "Business Casual"
+        ]
+    },
+    {
+        "type":"select",
+        "label":"Cual es su dress code del viernes?",
+        "options": [
+            "",
+            "formal",
+            "Casual",
+            "Business Casual"
+        ]
     },
     {
         "type":"text",
-        "label":"Duis aite irure dolor in reprehenderit in voluptate?"
+        "label":"Qué hace los fines de semana en el día?"
+    },
+    {
+        "type":"select",
+        "label":"Cómo se viste los fines de semana en el día?",
+        "options": [
+            "",
+            "formal",
+            "Casual",
+            "Business Casual"
+        ]
     },
     {
         "type":"text",
-        "label":"Sed ut perspiciatis unde ominis natus error sit voluptatem?"
+        "label":"Qué hace los fines de semana en la noche?"
     },
     {
         "type":"text",
-        "label":"Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+        "label":"Cómo se viste los fines de semana en la noche?"
     }
 ]
