@@ -1,7 +1,160 @@
 extends ../../_layouts/base
 
+include ../../_modules/quantity-selector/quantity-selector
+include ../../_modules/content-block/content-block
+
 block config
   - var baseUrl = '../../'
 
 block content
-    main.paginas.paginas--agendar
+    main.primera-cita.primera-cita--agendar
+        .primera-cita--agendar__header
+            p.primera-cita--agendar__title agendar cita
+        form.primera-cita--agendar__form
+            .primera-cita--agendar__form__group
+                p.primera-cita--agendar__form__select-text Seleccione la cita
+                select.primera-cita--agendar__form__selector.primera-cita--agendar__form__selector--cita
+                    option.primera-cita--agendar__form__option Primera Cita
+                    option.primera-cita--agendar__form__option Segunda Cita
+                    option.primera-cita--agendar__form__option Tercera Cita
+            .primera-cita--agendar__form__container
+                .primera-cita--agendar__form__col
+                    .primera-cita--agendar__form__data
+                        +content-block('', '1', 'Por favor elija una fecha para su cita', '', '', '', '',  'false')
+                    .primera-cita--agendar__form__calendar
+                        input#date(type="hidden", name="date")
+                        #monthPicker.monthly
+
+                .primera-cita--agendar__form__col
+                    .primera-cita--agendar__form__data
+                        +content-block('', '2', 'Ahora elija el horario para su cita', '', '', '', '', 'false')
+                    .primera-cita--agendar__form__time-select
+                        .primera-cita--agendar__form__hours.col-third
+                            p.primera-cita--agendar__form__hours__title Mañana
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour1')
+                                label.primera-cita--agendar__form__hour-label(for='hour1')
+                                    span.primera-cita--agendar__form__hour 7:00 AM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour2')
+                                label.primera-cita--agendar__form__hour-label(for='hour2')
+                                    span.primera-cita--agendar__form__hour 7:30 AM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour3')
+                                label.primera-cita--agendar__form__hour-label(for='hour3')
+                                    span.primera-cita--agendar__form__hour 8:00 AM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour4')
+                                label.primera-cita--agendar__form__hour-label(for='hour4')
+                                    span.primera-cita--agendar__form__hour 8:30 AM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour5')
+                                label.primera-cita--agendar__form__hour-label(for='hour5')
+                                    span.primera-cita--agendar__form__hour 9:00 AM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour6')
+                                label.primera-cita--agendar__form__hour-label(for='hour6')
+                                    span.primera-cita--agendar__form__hour 9:30 AM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour7')
+                                label.primera-cita--agendar__form__hour-label(for='hour7')
+                                    span.primera-cita--agendar__form__hour 10:00 AM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour8')
+                                label.primera-cita--agendar__form__hour-label(for='hour8')
+                                    span.primera-cita--agendar__form__hour 10:30 AM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour9')
+                                label.primera-cita--agendar__form__hour-label(for='hour9')
+                                    span.primera-cita--agendar__form__hour 11:00 AM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour10')
+                                label.primera-cita--agendar__form__hour-label(for='hour10')
+                                    span.primera-cita--agendar__form__hour 11:30 AM
+                        .primera-cita--agendar__form__hours.col-third
+                            p.primera-cita--agendar__form__hours__title Tarde
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour11')
+                                label.primera-cita--agendar__form__hour-label(for='hour11')
+                                    span.primera-cita--agendar__form__hour 12:00 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour12')
+                                label.primera-cita--agendar__form__hour-label(for='hour12')
+                                    span.primera-cita--agendar__form__hour 12:30 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour13')
+                                label.primera-cita--agendar__form__hour-label(for='hour13')
+                                    span.primera-cita--agendar__form__hour 1:00 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour14')
+                                label.primera-cita--agendar__form__hour-label(for='hour14')
+                                    span.primera-cita--agendar__form__hour 1:30 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour15')
+                                label.primera-cita--agendar__form__hour-label(for='hour15')
+                                    span.primera-cita--agendar__form__hour 2:00 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour16')
+                                label.primera-cita--agendar__form__hour-label(for='hour16')
+                                    span.primera-cita--agendar__form__hour 2:30 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour17')
+                                label.primera-cita--agendar__form__hour-label(for='hour17')
+                                    span.primera-cita--agendar__form__hour 3:00 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour18')
+                                label.primera-cita--agendar__form__hour-label(for='hour18')
+                                    span.primera-cita--agendar__form__hour 3:30 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour19')
+                                label.primera-cita--agendar__form__hour-label(for='hour19')
+                                    span.primera-cita--agendar__form__hour 4:00 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour20')
+                                label.primera-cita--agendar__form__hour-label(for='hour20')
+                                    span.primera-cita--agendar__form__hour 4:30 PM
+                        .primera-cita--agendar__form__hours.col-third
+                            p.primera-cita--agendar__form__hours__title Noche
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour21')
+                                label.primera-cita--agendar__form__hour-label(for='hour21')
+                                    span.primera-cita--agendar__form__hour 5:00 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour22')
+                                label.primera-cita--agendar__form__hour-label(for='hour22')
+                                    span.primera-cita--agendar__form__hour 5:30 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour23')
+                                label.primera-cita--agendar__form__hour-label(for='hour23')
+                                    span.primera-cita--agendar__form__hour 6:00 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour24')
+                                label.primera-cita--agendar__form__hour-label(for='hour24')
+                                    span.primera-cita--agendar__form__hour 6:30 PM
+                            .primera-cita--agendar__form__hours__wrapper
+                                input.primera-cita--agendar__form__input(type='radio', name='hour', id='hour25')
+                                label.primera-cita--agendar__form__hour-label(for='hour25')
+                                    span.primera-cita--agendar__form__hour 7:00 PM
+                .primera-cita--agendar__form__col
+                    .primera-cita--agendar__form__data
+                        +content-block('', '3', 'Indíquenos el lugar de su cita', '', '', '', '', 'false')
+                    p.primera-cita--agendar__form__text Tenemos registrada esta dirección:
+                    span.primera-cita--agendar__form__registered-address Calle 100 # 13-20, Bogotá
+                    .primera-cita--agendar__form__wrapper
+                        input.primera-cita--agendar__form__input(type='radio', name='option', id='option1')
+                        label.primera-cita--agendar__form__label(for='option1')
+                        p.primera-cita--agendar__form__info Si, deseo ser visitado en esta dirección
+                    .primera-cita--agendar__form__wrapper
+                        input.primera-cita--agendar__form__input(type='radio', name='option', id='option2')
+                        label.primera-cita--agendar__form__label(for='option2')
+                        p.primera-cita--agendar__form__info No, deseo que mi visita se haga en la siguiente dirección:
+                    input.primera-cita--agendar__form__address(type='text', placeholder='Dirección')
+                    select.primera-cita--agendar__form__selector
+                        option.primera-cita--agendar__form__option(value='') Ciudad
+                        option.primera-cita--agendar__form__option(value='0') Bogotá
+                        option.primera-cita--agendar__form__option(value='1') Medellín
+                        option.primera-cita--agendar__form__option(value='2') Barranquilla
+            button.primera-cita--agendar__form__address.primera-cita--agendar__form__address--submit agendar cita
+
+block scripts
+    script(src= baseUrl + 'scripts/monthly.js')

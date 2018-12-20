@@ -1,0 +1,48 @@
+extends ../../_layouts/base
+
+include ../../_modules/content-block/content-block
+include ../../_modules/slider/slider
+
+block config
+  - var baseUrl = '../../'
+
+block content
+    main.paginas.paginas--acerca
+        .paginas--acerca__row
+            .paginas--acerca__col.col-half
+                .paginas--acerca__image
+                    img(src="/images/paginas/hero.jpg")
+                +content-block('', 'marcas placèt', 'Loren ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt elit sed do euismod')
+            .paginas--acerca__col.paginas--acerca__col--slider.col-half
+                .paginas--acerca__image
+                    //- img(src="/images/paginas/hero.jpg")
+                +slider('paginas--acerca__slider', 'alt')
+                    each item in site.data.testimonios
+                        .paginas--acerca__slide
+                            .paginas--acerca__slide-image
+                                img(src=item.shopper)
+                            .paginas--acerca__card
+                                p.paginas--acerca__quote=item.quote
+                                p.paginas--acerca__author=item.author
+                                .paginas--acerca__content
+                                    p.paginas--acerca__text=item.text
+                                        |: #{item.name}
+
+        .paginas--acerca__row
+            .paginas--acerca__col.col-half
+                .paginas--acerca__image
+                    img(src="/images/paginas/hero.jpg")
+                +content-block('', 'regale una giftcard', 'Loren ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt elit sed do euismod', '', 'white')
+            .paginas--acerca__col.col-half
+                .paginas--acerca__image
+                    img(src="/images/paginas/hero.jpg")
+                +content-block('', 'refiera a un amigo', 'Loren ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt elit sed do euismod')
+        .paginas--acerca__row.paginas--acerca__col.paginas--acerca__col--big
+            .paginas--acerca__image.paginas--acerca__image--big
+                img(src="/images/paginas/hero.jpg")
+            +content-block('', 'descargue nuestra app', 'Loren ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt elit sed do euismod')
+            .paginas--acerca__container
+                .paginas--acerca__app-image
+                    img(src="/images/segunda-cita/app-store.png")
+                .paginas--acerca__app-image
+                    img(src="/images/segunda-cita/play-store.png")
