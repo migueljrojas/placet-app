@@ -3,5 +3,22 @@ mixin tab-datos-personales
         .tab--datos-personales__col.tab__col--description.col-third
             +content-block('creacion de clientes placèt', 'datos personales', 'Por favor introduzca los siguientes datos', '', 'white')
         .tab--datos-personales__col.tab__col--form.col-two-thirds
-            +uiform(site.data.creacionCliente, 'siguiente paso', 'light')
+            +uiform(site.data.creacionCliente, 'siguiente paso', 'light', false, 'perfil')
     
+    .primera-cita__step-count
+        .primera-cita__step.-active
+            .primera-cita__step-frame
+                span.primera-cita__step-number 1
+            .primera-cita__step-unactive •
+        .primera-cita__step
+            .primera-cita__step-frame
+                span.primera-cita__step-number 2
+            .primera-cita__step-unactive •
+        .primera-cita__step
+            .primera-cita__step-frame
+                span.primera-cita__step-number 3
+            .primera-cita__step-unactive •
+        .primera-cita__step
+            .primera-cita__step-frame
+                span.primera-cita__step-number 4
+            .primera-cita__step-unactive •

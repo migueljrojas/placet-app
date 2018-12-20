@@ -12,26 +12,14 @@ block config
 
 block content
     main.primera-cita.primera-cita--creacion-usuario
-        +tab-bienvenida
-        +tab-datos-personales
-        +tab-perfil-cliente
-        +tab-medidas-cliente
+        .primera-cita--creacion-usuario__tab(data-content="datos")
+            +tab-datos-personales
+        .primera-cita--creacion-usuario__tab(data-content="perfil")
+            +tab-perfil-cliente
+        .primera-cita--creacion-usuario__tab(data-content="medidas")
+            +tab-medidas-cliente
+        .primera-cita--creacion-usuario__tab(data-content="bienvenida")
+            +tab-bienvenida
         
-        .primera-cita__step-count
-            .primera-cita__step.-active
-                .primera-cita__step-frame
-                    span.primera-cita__step-number 1
-                .primera-cita__step-unactive •
-            .primera-cita__step
-                .primera-cita__step-frame
-                    span.primera-cita__step-number 2
-                .primera-cita__step-unactive •
-            .primera-cita__step
-                .primera-cita__step-frame
-                    span.primera-cita__step-number 3
-                .primera-cita__step-unactive •
-            .primera-cita__step
-                .primera-cita__step-frame
-                    span.primera-cita__step-number 4
-                .primera-cita__step-unactive •
+        
                 

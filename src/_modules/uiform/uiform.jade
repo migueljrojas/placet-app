@@ -1,4 +1,4 @@
-mixin uiform(config, buttonText, mode, innerForm)
+mixin uiform(config, buttonText, mode, innerForm, dataTarget)
     if innerForm == true
         .uiform(class="#{mode === 'light' ? 'uiform--light' : ''}")
             .uiform__wrapper
@@ -30,7 +30,10 @@ mixin uiform(config, buttonText, mode, innerForm)
                         if input.label && input.type != 'radio' && input.type != 'checkbox' && input.type != 'paragraph' && input.type != 'anchor'
                             label.uiform__label(for=input.id, class="uiform__label--#{input.type}")=input.label
 
-            button.uiform__button=buttonText
+            if dataTarget
+                a.uiform__button(data-target=dataTarget)=buttonText
+            else
+                button.uiform__button=buttonText
     else 
         form.uiform(class="#{mode === 'light' ? 'uiform--light' : ''}")
             .uiform__wrapper
@@ -63,4 +66,7 @@ mixin uiform(config, buttonText, mode, innerForm)
                         if input.label && input.type != 'radio' && input.type != 'checkbox' && input.type != 'paragraph' && input.type != 'anchor'
                             label.uiform__label(for=input.id, class="uiform__label--#{input.type}")=input.label
 
-            button.uiform__button=buttonText
+            if dataTarget
+                a.uiform__button(data-target=dataTarget)=buttonText
+            else
+                button.uiform__button=buttonText

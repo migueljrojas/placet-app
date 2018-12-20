@@ -2,3 +2,21 @@ mixin tab-bienvenida
     .tab.tab--bienvenida
         .tab--bienvenida__col.col-two-thirds
             +content-block('creacion de cliente placèt', 'bienvenido a placèt', 'Muchas gracias por su información! Con este registro ya podemos proceder a ver las prendsa disponibles', {"text":"vamos a comprar", "url":"#"}, 'white', '', '', 'true')
+    
+    .primera-cita__step-count
+        .primera-cita__step
+            .primera-cita__step-frame
+                span.primera-cita__step-number 1
+            .primera-cita__step-unactive •
+        .primera-cita__step
+            .primera-cita__step-frame
+                span.primera-cita__step-number 2
+            .primera-cita__step-unactive •
+        .primera-cita__step
+            .primera-cita__step-frame
+                span.primera-cita__step-number 3
+            .primera-cita__step-unactive •
+        .primera-cita__step.-active
+            .primera-cita__step-frame
+                span.primera-cita__step-number 4
+            .primera-cita__step-unactive •

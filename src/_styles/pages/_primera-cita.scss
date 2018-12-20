@@ -56,6 +56,30 @@
         color: $vibrantGolden;
     }
 
+    &--creacion-usuario {
+        &__tab {
+            @include trans;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            pointer-events: none;
+        
+            &.-active {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .uiform {
+                &__button {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
     .tab {
         display: flex;
         height: 90vh;
@@ -129,6 +153,7 @@
                         &__label {
                             opacity: 1;
                             text-transform: none;
+                            font-size: 1.4vw;
                         }
                     }
                 }
@@ -191,8 +216,14 @@
 
         &__col {
             &--filters {
-                padding: 5vw;
+                padding: 4vw 0 0;
             }
+        }
+
+        &__filters-wrapper {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
         }
 
         &__row {
@@ -218,11 +249,17 @@
                 background: $lightestGray;
                 padding: 0 5vw;
             }
+
+            &--drops,
+            &--price,
+            &--colors {
+                padding: 0 5vw 2vw;
+            }
         }
 
         &__title {
             text-transform: uppercase;
-            padding-bottom: 2vw;
+            padding-bottom: 1.3vw;
             font-weight: 300;
             border-bottom: 1px solid $lightGray;
             margin-top: 0;
@@ -250,20 +287,17 @@
                             position: absolute;
                             right: 0;
                         }
-
-                        &:focus {
-                            color: $vibrantGolden;
-                        }
                     }
 
                     &.-active {
-                        .tienda__filter__drop-sub {
+                        .primera-cita--tienda__filter__drop-sub {
                             max-height: 500px;
                             opacity: 1;
                         }
 
                         & > a {
                             font-weight: 700;
+                            color: $vibrantGolden;
 
                             i {
                                 transform: rotate(90deg)
@@ -288,10 +322,11 @@
                 margin-bottom: 20px;
                 margin-left: 10px;
                 margin-right: 10px;
-                width: 100%;
+                width: calc(100% - 20px);
 
                 input[type=range] {
                     -webkit-appearance: none;
+                    width: 100%;
                 }
 
                 input[type=range]::-webkit-slider-thumb {
@@ -310,8 +345,8 @@
 
                 &__bar-wrapper {
                     position: absolute;
-                    left: 0;
-                    right: 0;
+                    left: -10px;
+                    right: -10px;
                 }
 
                 &__bar {
@@ -365,22 +400,18 @@
                         }
                     }
                 }
-
-                &__price  {
-                    display: flex;
-                    width: 45%;
-                }
             }
 
             &__colors {
                 display: flex;
                 flex-wrap: wrap;
-                height: 20vh;
-                // padding: 20px 0;
             }
 
             &__color {
                 width: 20%;
+                text-align: center;
+                padding: 1.5vh 0;
+
 
                 &__button {
                     position: absolute;
@@ -394,11 +425,11 @@
                 }
 
                 &__label {
-                    width: 50%;
-                    height: 50%;
+                    width: 2vw;
+                    height: 2vw;
                     border-radius: 50px;
                     border: 3px solid transparent;
-                    // margin-right: 15px;
+                    display: inline-block;
                 }
             }
         }
@@ -551,12 +582,22 @@
 
             &--list {
                 background: $fadedIndigo;
+                position: relative;
+                z-index: 2;
             }
 
             &--images {
+                @include trans;
                 background: $lightestGray;
                 position: relative;
-                padding: 5vw 2.5vw 2vw 2.5vw
+                padding: 5vw 2.5vw 2vw 2.5vw;
+                transform: translateX(-100%);
+                opacity: 0;
+
+                &.-open {
+                    transform: translateX(0%);
+                    opacity: 1;
+                }
             }
         }
 
@@ -594,13 +635,14 @@
         }
 
         &__list-link {
+            @include trans;
             color: $white;
             text-decoration: none;
             font-weight: 500;
             font-size: 1.4vw;
             width: 100%;
 
-            &:focus {
+            &.-active {
                 @include arrow($pointTo: left, $color: $white, $size: 9px);
                 &:after {
                     right: 0;
@@ -610,13 +652,14 @@
         }
 
         &__sublist-link {
+            @include trans;
             color: $white;
             margin-left: 2vw;
             font-weight: 100;
             font-size: 1.4vw;
             text-decoration: none;
 
-            &:focus {
+            &.-active {
                 @include arrow($pointTo: left, $color: $white, $size: 9px);
 
                 &:after {
@@ -672,16 +715,24 @@
             height: 100%;
             display: flex !important;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
         }
 
         &__option {
-            height: 14vh;
-            width: 10vw;
+            height: 0;
+            width: 35%;
+            padding-bottom: 45%;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1.2vw;
 
             img {
+                position: absolute;
+                top:50%;
+                left:50%;
                 height: 100%;
                 width: auto;
+                transform: translate3d(-50%, -50%, 0);
             }
         }
 
@@ -731,7 +782,6 @@
                 text-transform: uppercase;
                 font-size: 3vw;
                 margin: 0;
-
             }
         }
 
@@ -749,25 +799,28 @@
             padding-bottom: 2vw;
             width: 100%;
             display: flex;
-        }
-
-        &__modal-checkbox {
-            width: 5%;
-        }
-
-        &__modal-frame {
-            width: 2vw;
-            height: 2vw;
-            border: 1px solid $vibrantGolden;
-            position: relative;
+            justify-content: space-between;
         }
 
         &__modal-input {
             &:checked {
-                & + label {
+                & + .uiform__label {
+                    color: $darkGray;
 
-                    color: vibrantGolden;
+                    &:before,
+                    &:after {
+                        color: $vibrantGolden;
+                    }
                 }
+            }
+        }
+
+        &__modal-label {
+            color: $darkGray;
+            font-size: 1.6vw;
+
+            &:focus {
+                color: $darkGray;
             }
         }
 
