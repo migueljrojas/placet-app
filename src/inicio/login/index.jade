@@ -9,7 +9,7 @@ block config
 block content
     main.inicio.inicio--login
         .inicio--login__col.col-half
-            +content-block('inicio', 'ingrese a placèt', 'Por favor, ingrese su email y contraseña registrados', '', '', 'false')
+            +content-block('inicio', 'ingrese a placèt', 'Por favor, ingrese su email y contraseña registrados', false, 'white', false)
             .inicio--login__form
                 +uiform(site.data.inicioForm, 'ingresar')
             .inicio--login__text

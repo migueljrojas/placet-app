@@ -8,6 +8,7 @@ global._ = require('underscore');
 var Header = require('../_modules/header/header');
 var Slider = require('../_modules/slider/slider');
 var DataSwitcher = require('../_modules/data-switcher/data-switcher');
+var Faqs = require('../_modules/data-switcher/faqs');
 var Multirange = require('../_modules/multirange/multirange');
 var Price = require('../_modules/multirange/price');
 
@@ -20,4 +21,5 @@ $(function() {
     new DataSwitcher();
     new Multirange();
     new Price();
+    new Faqs();
 });

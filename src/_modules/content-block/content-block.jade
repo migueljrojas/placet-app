@@ -1,7 +1,7 @@
-mixin content-block(subtitle, title, text, link, mode, titleMode, linkAlt, modal)
+mixin content-block(subtitle, title, text, link, mode, linkAlt, modal)
     - var modal = modal ? modal : false;
     
-    .content-block(class="#{mode === 'white' ? 'content-block--white' : ''} #{titleMode === 'big' ? 'content-block--big' : ''}")
+    .content-block(class="#{mode === 'white' ? 'content-block--white' : ''}")
         if subtitle
             span.content-block__subtitle=subtitle
 
