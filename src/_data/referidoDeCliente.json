@@ -1,0 +1,27 @@
+[
+    {
+        "type":"text",
+        "label":"Nombre",
+        "placeholder":"nombre"
+    },
+    {
+        "type":"text",
+        "label":"Apellido",
+        "placeholder":"apellido"
+    },
+    {
+        "type":"email",
+        "label":"email",
+        "placeholder":"email"
+    },
+    {
+        "type":"number",
+        "label":"telefono",
+        "placeholder":"telefono"
+    },
+    {
+        "type":"checkbox",
+        "label":"Confirmo que conozco a la persona que estoy refiriendo y entiendo que estoy sujeto a las políticas de privacidad de PLACÈT.",
+        "id":"acuerdo"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "type":"number",
+        "placeholder":"talla",
+        "label":"talla"
+    },
+    {
+        "type":"number",
+        "placeholder":"drop",
+        "label":"drop"
+    },
+    {
+        "type":"number",
+        "placeholder":"manga",
+        "label":"manga"
+    },
+    {
+        "type":"number",
+        "placeholder":"pecho",
+        "label":"pecho"
+    },
+    {
+        "type":"number",
+        "placeholder":"largo",
+        "label":"largo"
+    },
+    {
+        "type":"number",
+        "placeholder":"otro",
+        "label":"otro"
+    }
+]

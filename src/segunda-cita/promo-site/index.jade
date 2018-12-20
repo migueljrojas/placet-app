@@ -1,7 +1,28 @@
 extends ../../_layouts/base
 
+include ../../_modules/content-block/content-block
+
 block config
   - var baseUrl = '../../'
 
 block content
     main.segunda-cita.segunda-cita--promo-site
+        .col-third.segunda-cita__col.segunda-cita__col--intro.segunda-cita--promo-site__intro
+            +content-block('La comodidad de Placét', 'Desde su celular o laptop', false, false, 'white')
+
+        .col-two-thirds.segunda-cita__col.segunda-cita--promo-site__col
+            .segunda-cita--promo-site__content-wrapper
+                .segunda-cita--promo-site__content-block
+                    .col-two-thirds.segunda-cita--promo-site__content-col
+                        +content-block(false, 'Un Sitio Web ajustado a su medida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', {'text':'tienda online', 'url':'#'}, false)
+                    .col-third
+                .segunda-cita--promo-site__content-block
+                    .col-third
+                    .col-two-thirds.segunda-cita--promo-site__content-col
+                        .segunda-cita--promo-site__content
+                            +content-block(false, 'DESCARGUE NUESTRA APP PLACÉT', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', false, false)
+                            .segunda-cita--promo-site__app-stores
+                                a(href="#", target="_blank")
+                                    img(src="/images/segunda-cita/app-store.png")
+                                a(href="#", target="_blank")
+                                    img(src="/images/segunda-cita/play-store.png")
