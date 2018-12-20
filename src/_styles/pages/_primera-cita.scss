@@ -1250,20 +1250,44 @@
     }
 
     &--agendar {
-        &__form {
-            padding: 20px;
-            background: $lightestGray;
+        height: 90vh;
+        position: relative;
 
-            @include mq(sm) {
-                padding: 6vw 10vw;
+        &__header {
+            padding: 2.5vw 5vw;
+            background: $lightestGray;
+            height: 25vh;
+        }
+
+        &__title {
+            color: $indigo;
+            text-transform: uppercase;
+            font-family: $titleFont;
+            font-size: 4vw;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        &__form {
+            padding: 0 5vw 5vw 5vw;
+            position: absolute;
+            top: 15vh;
+
+            &__group {
+                display: flex;
+                position: absolute;
+                top: -10vh;
+                right: 5vw;
+            }
+
+            &__select-text {
+                color: $midGray;
+                font-size: 1.5vw;
             }
 
             &__container {
                 background: $white;
-
-                @include mq(sm) {
-                    display: flex;
-                }
+                display: flex;
             }
 
             &__select {
@@ -1307,58 +1331,67 @@
             }
 
             &__data {
-                padding-bottom: 20px;
-
-                @include mq(sm) {
-                    padding-bottom: 3vw;
-                }
+                padding-bottom: 0;
 
                 .content-block {
                     &__title {
-                        font-size: 40px;
-
-                        @include mq(sm) {
-                            font-size: 4vw;
-                            padding-bottom: 1.5vw;
-                            margin-bottom: 1.5vw;
-                        }
+                        font-size: 4vw;
+                        padding-bottom: 1.5vw;
+                        margin-bottom: 1.5vw;
                     }
 
                     &__text {
                         font-weight: 300;
-                        font-size: 20px;
-                        padding-bottom: 20px;
-                        padding-top: 0;
 
-                        @include mq(sm) {
-                            padding-bottom: 1vw;
-                            font-size: 1.2vw;
-                        }
+                        font-size: 1.3vw;
+                        width: 80%;
+                        margin: auto;
+                        color: $indigo;
                     }
                 }
+            }
+
+            &__time-select {
+                display: flex;
+                height: 100%;
+            }
+
+            &__hours {
+                &__title {
+                    margin: 0 0 1vw 0;
+                    display: flex;
+                    justify-content: center;
+                    color: $midGray;
+                }
+
+                &__wrapper {
+                    margin-bottom: .8vw;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            &__hour {
+                font-size: 1.2vw;
+                color: $midGray;
             }
 
             &__selector,
             &__address {
                 border: 1px solid $lightGray;
-                margin-bottom: 20px;
-                padding: 20px;
-                font-size: 18px;
                 background: transparent;
                 color: $lightGray;
+                margin-bottom: 1vw;
+                padding: 1vw;
+                font-size: 1.3vw;
 
-                @include mq(sm) {
-                    margin-bottom: 1vw;
-                    padding: 1vw;
-                    font-size: 1.3vw;
+                &--cita {
+                    width: 20vw;
+                    margin-left: 2vw;
                 }
 
                 &--shopper {
-                    width: 90%;
-
-                    @include mq(sm) {
-                        width: 20vw;
-                    }
+                    width: 20vw;
                 }
 
                 &--submit {
@@ -1368,49 +1401,31 @@
                     border: 1px solid $vibrantGolden;
                     color: $vibrantGolden;
                     text-transform: uppercase;
-                    margin-top: 20px;
-                    width: 90%;
-
-                    @include mq(sm) {
-                        margin-top: 3vw;
-                        padding: 1vw 2vw;
-                        width: auto;
-                    }
+                    padding: 1.5vw 4vw;
+                    width: auto;
+                    font-size: 1.5vw;
                 }
             }
 
             &__text {
                 text-align: center;
-                font-size: 16px;
-
-                @include mq(sm) {
-                    font-size: 1.1vw;
-                }
+                font-size: 1.1vw;
+                margin: 0 0 1.5vw 0;
             }
 
             &__registered-address {
                 color: $vibrantGolden;
                 text-align: center;
                 border-bottom: 1px solid $lightGray;
-                font-size: 18px;
-                padding-bottom: 20px;
-                margin-bottom: 20px;
-
-                @include mq(sm) {
-                    font-size: 1.2vw;
-                    padding-bottom: 1.5vw;
-                    margin-bottom: 1.5vw;
-                }
+                font-size: 1.2vw;
+                padding-bottom: 1.5vw;
+                margin-bottom: 1.5vw;
             }
 
             &__wrapper {
                 display: flex;
                 align-items: center;
-                padding-bottom: 20px;
-
-                @include mq(sm) {
-                    padding-bottom: 1.5vw;
-                }
+                padding-bottom: 1.5vw;
             }
 
             &__input {
@@ -1418,7 +1433,13 @@
                 left: -9999px;
 
                 &:checked + label {
-                        background: $vibrantGolden;
+                    background: $vibrantGolden;
+                }
+
+                &:checked + .primera-cita--agendar__form__hour-label {
+                    background: transparent;
+                    border: 2px solid $vibrantGolden;
+                    padding: .5vw;
                 }
             }
 
@@ -1434,15 +1455,9 @@
 
             &__info {
                 width: 90%;
-                padding-left: 10px;
-                font-size: 14px;
-                @include mq(sm) {
-                    padding-left: 1vw;
-                    font-size: 1.2vw;
-
-                }
+                padding-left: 1vw;
+                font-size: 1.2vw;
             }
         }
-
     }
 }

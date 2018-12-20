@@ -6,6 +6,7 @@
 global.$ = global.jQuery = require('jquery');
 global._ = require('underscore');
 var Header = require('../_modules/header/header');
+var Footer = require('../_modules/footer/footer');
 var Slider = require('../_modules/slider/slider');
 var DataSwitcher = require('../_modules/data-switcher/data-switcher');
 var Faqs = require('../_modules/data-switcher/faqs');
@@ -19,6 +20,7 @@ $(function() {
     require('../../bower_components/slick-carousel/slick/slick');
 
     new Header();
+    new Footer();
     new Slider();
     new DataSwitcher();
     new Multirange();
