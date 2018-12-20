@@ -15,9 +15,16 @@
     }
 
     &__title {
-        @include title($separator: true, $lineSeparation: 4vh,
-        $translate: -50%, $color: $indigo, $background: $vibrantGolden,
-        $lineHeight: 1px, $size: 4.5vw, $lineWidth: 5vw);
+        @include title(
+            $separator: true,
+            $lineSeparation: 4vh,
+            $translate: -50%,
+            $color: $indigo,
+            $background: $vibrantGolden,
+            $lineHeight: 1px,
+            $size: 4.5vw,
+            $lineWidth: 5vw
+        );
 
         font-weight: normal;
     }

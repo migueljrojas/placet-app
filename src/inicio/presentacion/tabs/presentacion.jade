@@ -1,4 +1,4 @@
-mixin tab-presentacion(config)
+mixin tab-presentacion()
     .tab.tab--presentacion
         .tab--presentacion__col.tab--presentacion__col--logo.col-half
             .tab--presentacion__logo
@@ -11,11 +11,9 @@ mixin tab-presentacion(config)
                 .tab--presentacion__cell.tab--presentacion__cell--up-left
                     +content-block('', 'como funciona?')
                 .tab--presentacion__cell.tab--presentacion__cell--down-left
-                    .tab--presentacion__image
-                        img(src='/images/presentacion/down-left.jpg')
+                    img(src='/images/inicio/presentacion-bottom.jpg')
             .tab--presentacion__subcol.col-half
                 .tab--presentacion__cell.tab--presentacion__cell--up-right
-                    .tab--presentacion__image
-                        img(src='/images/presentacion/up-right.png')
+                    img(src='/images/inicio/presentacion-top.jpg')
                 .tab--presentacion__cell.tab--presentacion__cell--down-right
                     +content-block('', 'beneficios', '', '', 'white')

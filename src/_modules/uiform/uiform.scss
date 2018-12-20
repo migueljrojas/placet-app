@@ -14,21 +14,20 @@
     }
 
     &__label {
+        @include trans;
 
         position: absolute;
         top: -1vh;
         left: 0;
         color: $white;
         opacity: 0;
-        font-size: 1.4vw;
+        font-size: 1.2vw;
         text-transform: uppercase;
 
         &--select {
             opacity: 1;
-            font-size: 1.4vw;
             color: $white;
             top: -1.1vw;
-            text-transform: uppercase;
         }
     }
 
@@ -73,18 +72,6 @@
             &:focus + label {
                 color: $vibrantGolden;
                 opacity: 1;
-                font-size: 1.2vw;
-            }
-        }
-
-        &--select {
-            & + label {
-                font-size: 1.4vw;
-                text-transform: uppercase;
-            }
-
-            &:focus + label {
-                font-size: 1.4vw;
             }
         }
     }

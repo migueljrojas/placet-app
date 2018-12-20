@@ -15,16 +15,22 @@ block config
 block content
     main.inicio.inicio--presentacion
         .inicio--presentacion__content
-            //- +tab-presentacion
-            //- +tab-marcas
-            //- +tab-testimonios
-            //- +tab-beneficios
-            //- +tab-como-funciona
-            +tab-faq
+            .inicio--presentacion__tab.-active(data-content="presentacion")
+                +tab-presentacion
+            .inicio--presentacion__tab(data-content="marcas")
+                +tab-marcas
+            .inicio--presentacion__tab(data-content="testimonios")
+                +tab-testimonios
+            .inicio--presentacion__tab(data-content="beneficios")
+                +tab-beneficios
+            .inicio--presentacion__tab(data-content="como-funciona")
+                +tab-como-funciona
+            .inicio--presentacion__tab(data-content="faq")
+                +tab-faq
         
         .inicio--presentacion__nav
             +slider('inicio--presentacion__nav-panel', 'normal')
-                each group in site.data.inicioNav
-                    .inicio--presentacion__nav-group
+                each group, index in site.data.inicioNav
+                    .inicio--presentacion__nav-group(class="inicio--presentacion__nav-group--#{index + 1}")
                         each item in group
                             a.inicio--presentacion__nav-item(href="#" data-target=item.target)=item.label

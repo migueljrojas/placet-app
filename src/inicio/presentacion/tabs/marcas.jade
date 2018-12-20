@@ -1,27 +1,29 @@
 mixin tab-marcas()
-    .tab.tab--marcas(data-content="marcas")
-        .tab--marcas__col.col-third
-            .tab--marcas__cell
-                .tab--marcas__image
+    .tab.tab--marcas
+        h2.tab--marcas__header.tab__header Marcas
+        .tab--marcas__content
+            .tab--marcas__col.col-third
+                .tab--marcas__cell.tab--marcas__cell--image
                     img(src="/images/marcas/austin.jpg")
-            .tab--marcas__cell.tab--marcas__cell--square
-                .tab--marcas__logo
-                    img(src="/images/marcas/austin-logo.png")
-                p.tab--marcas__text La marca Austin Reed loren ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut PLACÈT
-        .tab--marcas__col.col-third
-            .tab--marcas__cell.tab--marcas__cell--square.tab--marcas__cell--color
-                .tab--marcas__logo
-                    img(src="/images/marcas/cerruti-logo.png")
-                p.tab--marcas__text La marca Cerruti loren ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut PLACÈT
-            .tab--marcas__cell
-                .tab--marcas__image
+                .tab--marcas__cell.tab--marcas__cell--square
+                    .tab--marcas__cell-content
+                        .tab--marcas__logo
+                            img(src="/images/marcas/austin-logo.png")
+                        p.tab--marcas__text La marca Austin Reed loren ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut PLACÈT
+            .tab--marcas__col.col-third
+                .tab--marcas__cell.tab--marcas__cell--square.tab--marcas__cell--color
+                    .tab--marcas__cell-content
+                        .tab--marcas__logo
+                            img(src="/images/marcas/cerruti-logo.png")
+                        p.tab--marcas__text La marca Cerruti loren ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut PLACÈT
+                .tab--marcas__cell.tab--marcas__cell--image
                     img(src="/images/marcas/cerruti.jpg")
-        .tab--marcas__col.col-third
-            .tab--marcas__cell
-                .tab--marcas__image
+            .tab--marcas__col.col-third
+                .tab--marcas__cell.tab--marcas__cell--image
                     img(src="/images/marcas/guy-laroche.jpg")
-            .tab--marcas__cell.tab--marcas__cell--square
-                .tab--marcas__logo
-                    img(src="/images/marcas/guy-laroche-logo.png")
-                p.tab--marcas__text La marca Guy Laroche loren ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut PLACÈT
-        
+                .tab--marcas__cell.tab--marcas__cell--square
+                    .tab--marcas__cell-content
+                        .tab--marcas__logo
+                            img(src="/images/marcas/guy-laroche-logo.png")
+                        p.tab--marcas__text La marca Guy Laroche loren ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut PLACÈT
+            
