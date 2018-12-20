@@ -4,6 +4,7 @@
 var Slider = function() {
     var slider = $('._slider');
     var sliderAlt = $('._slider-alt');
+    var sliderAll = $('._slider-all');
     var sliderMulti = $('._slidermulti');
 
     if (slider) {
@@ -11,7 +12,7 @@ var Slider = function() {
             $(this).slick({
                 dots: false,
                 fade: true,
-                arrows:  true,
+                arrows: true,
                 infinite: false,
                 autoplay: false
             });
@@ -24,6 +25,17 @@ var Slider = function() {
                 fade: true,
                 arrows: false,
                 infinite: true,
+                autoplay: false
+            });
+        });
+    }
+    if (sliderAll) {
+        sliderAll.each(function(){
+            $(this).slick({
+                dots: true,
+                fade: true,
+                arrows: true,
+                infinite: false,
                 autoplay: false
             });
         });

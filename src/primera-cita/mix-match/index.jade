@@ -1,5 +1,8 @@
 extends ../../_layouts/base
 
+include ../../_modules/slider/slider
+include ../../_modules/eg-modal/eg-modal
+
 block config
   - var baseUrl = '../../'
 
@@ -57,4 +60,63 @@ block content
                                     li
                                         a.primera-cita--mix-match__sublist-link(href="#") Medias
                     .primera-cita--mix-match__container.primera-cita--mix-match__container--images.col-half
-                        +slider()
+                        h3.primera-cita--mix-match__title.primera-cita--mix-match__title--images prendas
+                        +slider('primera-cita--mix-match__slider', 'all')
+                            each slide in site.data.mixMatch
+                                .primera-cita--mix-match__slide
+                                    each shirt in slide
+                                        .primera-cita--mix-match__option
+                                            img(src=shirt)
+        .primera-cita--mix-match__col.primera-cita--mix-match__col--look.col-half
+            .primera-cita--mix-match__row.primera-cita--mix-match__row--look
+                button.primera-cita--mix-match__button
+                    i.fa.fa-bars
+                button.primera-cita--mix-match__button
+                    i.fa.fa-pencil
+                button.primera-cita--mix-match__button
+                    i.fa.fa-question-circle-o
+            button.primera-cita--tienda__button.primera-cita--mix-match__button--finish(data-modal='open') finalizar
+
+        +eg-modal()
+            .primera-cita--mix-match__modal-wrapper
+                .primera-cita--mix-match__modal-header
+                    h2 estos son los items de su look
+                .primera-cita--mix-match__modal-content
+                    .primera-cita--mix-match__modal-group
+                        .primera-cita--mix-match__modal-checkbox
+                            .primera-cita--mix-match__modal-frame
+                                input.primera-cita--mix-match__modal-input(type='checkbox' id="checkbox1" checked)
+                                label.primera-cita--mix-match__modal-label(for="checkbox1")
+                        .primera-cita--mix-match__modal-item-name 
+                            p Camisa Austin Reed cuadros
+                        .primera-cita--mix-match__modal-item-price
+                            sapn $ 944.000
+                    .primera-cita--mix-match__modal-group
+                        .primera-cita--mix-match__modal-checkbox
+                            .primera-cita--mix-match__modal-frame
+                                input.primera-cita--mix-match__modal-input(type='checkbox' id="checkbox1" checked)
+                                label.primera-cita--mix-match__modal-label(for="checkbox1")
+                        .primera-cita--mix-match__modal-item-name 
+                            p Pantalon informal Guy Laroche Azul Oscuro
+                        .primera-cita--mix-match__modal-item-price
+                            sapn $ 944.000
+                    .primera-cita--mix-match__modal-group
+                        .primera-cita--mix-match__modal-checkbox
+                            .primera-cita--mix-match__modal-frame
+                                input.primera-cita--mix-match__modal-input(type='checkbox' id="checkbox1" checked)
+                                label.primera-cita--mix-match__modal-label(for="checkbox1")
+                        .primera-cita--mix-match__modal-item-name 
+                            p Saco Cerruti Gris Claro
+                        .primera-cita--mix-match__modal-item-price
+                            sapn $ 944.000
+                    .primera-cita--mix-match__modal-group
+                        .primera-cita--mix-match__modal-checkbox
+                            .primera-cita--mix-match__modal-frame
+                                input.primera-cita--mix-match__modal-input(type='checkbox' id="checkbox1" checked)
+                                label.primera-cita--mix-match__modal-label(for="checkbox1")
+                        .primera-cita--mix-match__modal-item-name
+                            p Zapatos Austin Reed Gamuza negro
+                        .primera-cita--mix-match__modal-item-price
+                            span $ 944.000
+                .primera-cita--mix-match__modal-button
+                    button preseleccionar estas prendas

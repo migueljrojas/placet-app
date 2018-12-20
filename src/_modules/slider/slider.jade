@@ -12,3 +12,8 @@ mixin slider(klass, mode)
         ._slider-alt(class=klass)
             if block
                 block
+
+    if mode == 'all'
+        ._slider-all(class=klass)
+            if block
+                block
