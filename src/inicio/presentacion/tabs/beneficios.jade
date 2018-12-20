@@ -3,41 +3,115 @@ mixin tab-beneficios()
         h2.tab--beneficios__header.tab__header beneficios de placèt
         .tab--beneficios__content
             .tab--beneficios__col.col-third
-                .tab--beneficios__cell
+                
+                .tab--beneficios__cell(data-benefit="comodidad")
                     .tab--beneficios__image
                         img(src="/images/inicio/beneficios-1.jpg")
                     .tab--beneficios__title comodidad
-                .tab--beneficios__cell
-                    .tab--beneficios__image
-                        img(src="/images/inicio/beneficios-4.jpg")
-                    .tab--beneficios__title one-stop shopping
-                .tab--beneficios__cell
-                    .tab--beneficios__image
-                        img(src="/images/inicio/beneficios-7.jpg")
-                    .tab--beneficios__title amplio surtido
-            .tab--beneficios__col.col-third
-                .tab--beneficios__cell
-                    .tab--beneficios__image
-                        img(src="/images/inicio/beneficios-2.jpg")
-                    .tab--beneficios__title tallas perfectas para usted
-                .tab--beneficios__cell
+
+                .tab--beneficios__cell(data-benefit="custom-fit")
                     .tab--beneficios__image
                         img(src="/images/inicio/beneficios-5.jpg")
-                    .tab--beneficios__title plataforma personalizada
-                .tab--beneficios__cell
+                    .tab--beneficios__title tallas perfectas para usted
+
+                .tab--beneficios__cell(data-benefit="plataforma")
+                    .tab--beneficios__image
+                        img(src="/images/inicio/beneficios-2.jpg")
+                    .tab--beneficios__title plataforma personalizada                
+            
+            .tab--beneficios__col.col-third
+
+                .tab--beneficios__cell(data-benefit="asesoria")
                     .tab--beneficios__image
                         img(src="/images/inicio/beneficios-8.jpg")
                     .tab--beneficios__title asesoría profesional
-            .tab--beneficios__col.col-third
-                .tab--beneficios__cell
+                
+                .tab--beneficios__cell(data-benefit="surtido")
                     .tab--beneficios__image
-                        img(src="/images/inicio/beneficios-3.jpg")
-                    .tab--beneficios__title relación precio calidad
-                .tab--beneficios__cell
-                    .tab--beneficios__image
-                        img(src="/images/inicio/beneficios-6.jpg")
-                    .tab--beneficios__title haga su propio mix & match
-                .tab--beneficios__cell
+                        img(src="/images/inicio/beneficios-7.jpg")
+                    .tab--beneficios__title amplio surtido
+                
+                .tab--beneficios__cell(data-benefit="satisfaccion")
                     .tab--beneficios__image
                         img(src="/images/inicio/beneficios-9.jpg")
                     .tab--beneficios__title garantía total de satisfacción
+            
+            .tab--beneficios__col.col-third
+
+                .tab--beneficios__cell(data-benefit="one-stop")
+                    .tab--beneficios__image
+                        img(src="/images/inicio/beneficios-4.jpg")
+                    .tab--beneficios__title one-stop shopping
+                
+                .tab--beneficios__cell(data-benefit="mix-match")
+                    .tab--beneficios__image
+                        img(src="/images/inicio/beneficios-6.jpg")
+                    .tab--beneficios__title haga su propio mix & match
+                
+                .tab--beneficios__cell(data-benefit="precio-calidad")
+                    .tab--beneficios__image
+                        img(src="/images/inicio/beneficios-3.jpg")
+                    .tab--beneficios__title relación precio calidad
+
+        .tab--beneficios__cover(data-cover="comodidad")
+            img(src="/images/inicio/cover.jpg")
+            .tab--beneficios__cover__close(data-benefit-close="true")
+            .tab--beneficios__cover__data
+                h3.tab--beneficios__cover__title comodidad
+                .tab--beneficios__cover__text Placet va a donde usted elija y a la hora que mas le convenga. No visite la tienda, placet se la lleva.
+
+        .tab--beneficios__cover(data-cover="custom-fit")
+            img(src="/images/inicio/cover.jpg")
+            .tab--beneficios__cover__close(data-benefit-close="true")
+            .tab--beneficios__cover__data
+                h3.tab--beneficios__cover__title tallas perfectas para usted
+                .tab--beneficios__cover__text Nuestro profundo  portafolio de tallas asegura que las prendas  escogidas le garantizan el fit personalizado
+
+        .tab--beneficios__cover(data-cover="plataforma")
+            img(src="/images/inicio/cover.jpg")
+            .tab--beneficios__cover__close(data-benefit-close="true")
+            .tab--beneficios__cover__data
+                h3.tab--beneficios__cover__title plataforma personalizada                
+                .tab--beneficios__cover__text Después de su primera experiencia de compra podrá acceder a todos nuestros beneficios a través de nuestra pagina web y app
+
+        .tab--beneficios__cover(data-cover="asesoria")
+            img(src="/images/inicio/cover.jpg")
+            .tab--beneficios__cover__close(data-benefit-close="true")
+            .tab--beneficios__cover__data
+                h3.tab--beneficios__cover__title asesoría profesional
+                .tab--beneficios__cover__text Placet le llevamos un equipo de asesoría. Una personal stylist experta en moda y un sastre certificado que garantiza el fit personalizado. 
+
+        .tab--beneficios__cover(data-cover="surtido")
+            img(src="/images/inicio/cover.jpg")
+            .tab--beneficios__cover__close(data-benefit-close="true")
+            .tab--beneficios__cover__data
+                h3.tab--beneficios__cover__title amplio surtido
+                .tab--beneficios__cover__text Con mas de 3000 prendas para escoger, puede estar seguro  que en ninguna tienda tendrá la misma cantidad de alternativas.
+
+        .tab--beneficios__cover(data-cover="satisfaccion")
+            img(src="/images/inicio/cover.jpg")
+            .tab--beneficios__cover__close(data-benefit-close="true")
+            .tab--beneficios__cover__data
+                h3.tab--beneficios__cover__title garantía total de satisfacción
+                .tab--beneficios__cover__text Pague únicamente hasta que sienta que las prendas son las indicadas para usted. Nuestro propósito es su satisfacción total.
+
+        .tab--beneficios__cover(data-cover="one-stop")
+            img(src="/images/inicio/cover.jpg")
+            .tab--beneficios__cover__close(data-benefit-close="true")
+            .tab--beneficios__cover__data
+                h3.tab--beneficios__cover__title one-stop shopping
+                .tab--beneficios__cover__text Tenemos todo lo que necesita para vestirse  de acuerdo a todas  las ocasiones de su estilo de vida, con Placet no tiene que volver a un centro comercial.
+
+        .tab--beneficios__cover(data-cover="mix-match")
+            img(src="/images/inicio/cover.jpg")
+            .tab--beneficios__cover__close(data-benefit-close="true")
+            .tab--beneficios__cover__data
+                h3.tab--beneficios__cover__title haga su propio mix & match
+                .tab--beneficios__cover__text Esta solución tecnologica permite  combinar prendas  hasta que armes los looks perfectos.
+
+        .tab--beneficios__cover(data-cover="precio-calidad")
+            img(src="/images/inicio/cover.jpg")
+            .tab--beneficios__cover__close(data-benefit-close="true")
+            .tab--beneficios__cover__data
+                h3.tab--beneficios__cover__title relación precio calidad
+                .tab--beneficios__cover__text Esta experiencia es un buena decisión para usted. En Placet prensamos que la inversión en su imagen  no tiene que costar mas.

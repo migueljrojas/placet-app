@@ -1,27 +1,47 @@
 [
     {
         "bullet":"1.",
-        "question":"Nemo enim ipsam voluptatem quia voluptas sit aspernatur?",
-        "answer":"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "question":"Que es una personal Stylist?",
+        "answer":"Una experta en moda y estilo."
     },
     {
         "bullet":"2.",
-        "question":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat?",
-        "answer":"Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
+        "question":"Donde descargo la APP de Placet?",
+        "answer":"Google Play y App Store"
     },
     {
         "bullet":"3.",
-        "question":"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet?",
-        "answer":"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "question":"Necesito que una  Personal Stylist me visite para comprar?",
+        "answer":"Si, es indispensable que tomemos todas tus tallas para poder iniciar la experiencia Placet."
     },
     {
         "bullet":"4.",
-        "question":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commod?",
-        "answer":"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "question":"Cuanto tardan en entregar mi pedido?",
+        "answer":"4 días hábiles que empiezan a contar un dia después de recibir tu pago"
     },
     {
         "bullet":"5.",
-        "question":"Quis autem vel eum iure reprehenderit qui in ea voluptate velit?",
-        "answer":"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "question":"Como funcionan los referidos?",
+        "answer":"Por cada compra de un referido en PLACET se abonara el 10% del valor  a tu cuenta para que lo redimas en tus próximas compras!."
+    },
+    {
+        "bullet":"6.",
+        "question":"Que es una GiftCard?",
+        "answer":"Una tarjeta de regalo que puede cargar con dinero y obsequiar a sus conocidos para que puedan disfrutar la experiencia Placet"
+    },
+    {
+        "bullet":"7.",
+        "question":"Como puedo hacer seguimiento a mi pedido?",
+        "answer":"con su personal stylist o con el numero de servicio al cliente 01800126632"
+    },
+    {
+        "bullet":"8.",
+        "question":"Placet tiene puntos de venta?",
+        "answer":"No. La experiencia Placet es personalizada y por lo tanto no tiene puntos de venta."
+    },
+    {
+        "bullet":"9.",
+        "question":"Como funcióna el Gift Registry",
+        "answer":"Aquellas prendas que por el momento no son de su necesidad quedaran guardadas y estas se le sugerirán como obsequio a las personas que usted nos indique."
     }
 ]

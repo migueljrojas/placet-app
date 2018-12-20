@@ -10,6 +10,7 @@ var Footer = require('../_modules/footer/footer');
 var Slider = require('../_modules/slider/slider');
 var DataSwitcher = require('../_modules/data-switcher/data-switcher');
 var Faqs = require('../_modules/data-switcher/faqs');
+var Benefits = require('../_modules/data-switcher/benefits');
 var Multirange = require('../_modules/multirange/multirange');
 var Price = require('../_modules/multirange/price');
 var EgModal = require('../_modules/eg-modal/eg-modal');
@@ -32,4 +33,5 @@ $(function() {
     new QuantitySelector();
     new Product();
     new VideoOverlay();
+    new Benefits();
 });

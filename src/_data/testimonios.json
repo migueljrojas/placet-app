@@ -1,18 +1,37 @@
 [
     {
-        "background":"/images/testimonios/about-main.jpg",
-        "quote":"“Sara es excepcional en su trabajo y vale cada minuto. Tiene un ojo meticuloso al detalle y es una Personal Shopper perfeccionista que siempre está dispuesta a hacer ese esfuerzo adicional para sus clientes”",
-        "author":"Carlos Raúl Yepes, Ex-Presidente Bancolombia",
-        "shopper":"/images/testimonios/person-1.png",
-        "text":"Personal Shopper",
-        "name":"Sara Fernández"
+        "quote":"“Tengo una agenda muy apretada. Hoy en día Placet representa para mi mucho más que una venta de ropa:   Es una experiencia. Un equipo de profesionales en moda masculina lleva la tienda a donde más me convenga, se adapta a mis horarios y más que vestirme, desarrollan mi imagen. Hoy puedo decir que mi vestuario e imagen se lo confió a Placet.”",
+        "author":"Felipe jaramillo, Director ejecutivo de 10 MUSIC",
+        "shopper":"",
+        "text":"",
+        "name":""
     },
     {
-        "background":"/images/testimonios/about-quotes.jpg",
-        "quote":"“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”",
-        "author":"Carlos Raúl Yepes, Ex-Presidente Bancolombia",
-        "shopper":"/images/testimonios/person-2.png",
-        "text":"Personal Shopper",
-        "name":"Sara Fernández"
+        "quote":"“Mi proceso como empresario me ha enseñado a cuidar el dinero. Evaluando la ecuación de costo beneficio en todas mis decisiones. Varias veces me presentaron el modelo Placet pero percibía que debido a sus amplios beneficios pagaría mucho más por vestirme bien. Me equivoque. Hoy puedo decir que no cambio a placet porque se adapta a mi estilo de vida y pago lo mismo que en una tienda tradicional.”",
+        "author":"Robert Chehebar, Presidente junta directiva Pepe Ganga S.A",
+        "shopper":"",
+        "text":"",
+        "name":""
+    },
+    {
+        "quote":"“Antes de conocer a Placet sufría con cada visita al centro comercial. Debido a mi trabajo necesito vestirme bien, pero tengo dos hijos pequeños, por eso cuando salgo de la oficina quiero estar con ellos. No los voy a cambiar por un centro comercial saturado de gente. ¡Con Placet solucioné el problema!  Evito la visita al centro comercial, tienen todo lo que necesito para vestirme y definitivamente muchas más alternativas de ropa para escoger que en una tienda tradicional. Para mi Placet ha sido un buen negocio.”",
+        "author":"Alberto Nessim, Presidente Vivatex S.A",
+        "shopper":"",
+        "text":"",
+        "name":""
+    },
+    {
+        "quote":"“Cuando me hablaron de placet, me imagine un vendedor trayendo unos cuantos vestidos para medirme en mi casa. No es así. Primero, llego un equipo muy bien preparado, me hicieron un diagnóstico y luego trajeron solo lo que me gusta y sirve. Placet es una nota!”",
+        "author":"Alberto Pardo, Presidente Adsmovil",
+        "shopper":"",
+        "text":"",
+        "name":""
+    },
+    {
+        "quote":"“La moda nunca fue una fortaleza para mí. La ropa me quedaba grande. La verdad no me vestía bien.  No sabía combinar colores. Con la herramienta tecnológica de Mix and macth de placet escojo muy bien las pintas que me convienen y gustan!  No cambio a plácet por nada en el mundo.”",
+        "author":"Felipe Ayerbe Gomez, Socio, Penta, Asesorias Financieras",
+        "shopper":"",
+        "text":"",
+        "name":""
     }
 ]
