@@ -8,6 +8,7 @@ global._ = require('underscore');
 var Header = require('../_modules/header/header');
 var Slider = require('../_modules/slider/slider');
 var DataSwitcher = require('../_modules/data-switcher/data-switcher');
+var Faqs = require('../_modules/data-switcher/faqs');
 var Multirange = require('../_modules/multirange/multirange');
 var Price = require('../_modules/multirange/price');
 var EgModal = require('../_modules/eg-modal/eg-modal');
@@ -21,5 +22,9 @@ $(function() {
     new DataSwitcher();
     new Multirange();
     new Price();
+<<<<<<< HEAD
     new EgModal();
+=======
+    new Faqs();
+>>>>>>> 5380cc9519f0cd8402b5c91569f63ad8228bfc46
 });
