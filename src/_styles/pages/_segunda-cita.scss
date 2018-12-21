@@ -569,6 +569,7 @@
 
     &--giftcard {
         &__col {
+            position: relative;
             &--intro {
                 padding: 0;
 
@@ -597,8 +598,33 @@
             }
         }
 
+        &__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        &__overlay {
+            background: $indigo;
+            mix-blend-mode: multiply;
+            position: absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+        }
+
         &__content-block {
             width: 100%;
+            position: relative;
         }
 
         &__card {
