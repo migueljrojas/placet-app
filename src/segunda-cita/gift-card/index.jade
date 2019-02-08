@@ -20,10 +20,10 @@ block content
                     .segunda-cita--giftcard__form__group
                         label.segunda-cita--giftcard__form__label Elija el valor de su tarjeta de regalo
                         input.segunda-cita--giftcard__form__input.uiform__input(type="number", placeholder="$")
-                    .segunda-cita--giftcard__form__group
-                        label.segunda-cita--giftcard__form__label ¿Cuántas tarjetas desea regalar?
-                        .segunda-cita--giftcard__form__input
-                            +quantity-selector(1)
+                    //- .segunda-cita--giftcard__form__group
+                    //-     label.segunda-cita--giftcard__form__label ¿Cuántas tarjetas desea regalar?
+                    //-     .segunda-cita--giftcard__form__input
+                    //-         +quantity-selector(1)
                     .segunda-cita--giftcard__form__group
                         label.segunda-cita--giftcard__form__label nombre del beneficiario
                         input.segunda-cita--giftcard__form__input.uiform__input(type="text")
@@ -33,6 +33,11 @@ block content
                     .segunda-cita--giftcard__form__group
                         label.segunda-cita--giftcard__form__label email del beneficiario
                         input.segunda-cita--giftcard__form__input.uiform__input(type="email")
+                    .segunda-cita--giftcard__form__group
+                        label.segunda-cita--giftcard__form__label Deséa regalar otra tarjeta?
+                        select.segunda-cita--giftcard__form__input.uiform__input
+                            option Si
+                            option No
                     .segunda-cita--giftcard__form__group
                         button.segunda-cita--giftcard__form__submit() AGREGAR AL CARRO DE COMPRAS
 
